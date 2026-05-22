@@ -144,7 +144,7 @@ const BuySellScreen = () => {
             className="flex-grow-1"
             style={{ color: "#dcdcdc", fontSize: 13, lineHeight: 1.35 }}
           >
-            How to sell crypto instantly with a credit/debit card on Bitget?
+            How to sell crypto instantly with a credit/debit card on Bitclub?
           </div>
           <FiChevronRight size={18} color="#9a9a9a" />
         </div>
