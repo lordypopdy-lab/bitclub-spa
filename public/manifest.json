@@ -2,7 +2,7 @@
     "name": "Bitclub",
     "short_name": "Bitclub",
     "lang": "en-US",
-    "start_url": "https://bitclub-wallet.vercel.app/" ,
+    "start_url": "https://bitclub-spa.vercel.app" ,
     "display": "standalone",
     "background_color": "#11150F",
     "theme_color": "#25C866",
