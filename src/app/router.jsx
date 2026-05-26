@@ -15,9 +15,17 @@ import Boarding2 from "../modules/auth/Boarding2";
 import ListBlog from "../components/blog/ListBlog";
 import Exchange from "../modules/account/Exchange";
 import BlogDetail from "../components/blog/BlogDetail";
+import AdsScreen from "../modules/account/p2p/AdsScreen";
+import P2PScreen from "../modules/account/p2p/P2PScreen";
 import Assets from "../modules/account/assets/Assets.jsx";
+import OrdersScreen from "../modules/account/p2p/OrdersScreen";
 import AddFundsScreen from "../modules/account/funds/AddFundsScreen";
+import P2PExpressScreen from "../modules/account/p2p/P2PExpressScreen";
 import BuySellScreen from "../modules/exchange/components/BuySellScreen";
+import FaqScreen from "../modules/account/deposit/components/FaqScreen.jsx";
+import SelectCoinScreen from "../modules/account/deposit/components/SelectCoinScreen";
+import BankTransferScreen from "../modules/account/deposit/components/BankTransferScreen.jsx";
+import DepositHistoryScreen from "../modules/account/deposit/components/DepositHistoryScreen";
 
 import ProtectedRoute from "../routes/ProtectedRoute";
 
@@ -40,13 +48,21 @@ export default function Router() {
             <Route path="/earn" element={<Earn />} />
             <Route path="/send" element={<Send />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/faq" element={<FaqScreen />} />
+            <Route path="/p2p" element={<P2PScreen />} />
             <Route path="/assets" element={<Assets />} />
             <Route path="/blog" element={<ListBlog />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/exchange" element={<Exchange />} />
+            <Route path="/p2p-ads" element={<AdsScreen />} />
             <Route path="/blog-detail" element={<BlogDetail />} />
             <Route path="/buy-sell" element={<BuySellScreen />} />
+            <Route path="/p2p-orders" element={<OrdersScreen />} />
             <Route path="/add-funds" element={<AddFundsScreen />} />
+            <Route path="/p2p-express" element={<P2PExpressScreen />} />
+            <Route path="/deposit-crypto" element={<SelectCoinScreen />} />
+            <Route path="/bank-transfer" element={<BankTransferScreen />} />
+            <Route path="/deposit-history" element={<DepositHistoryScreen />} />
           </Route>
         </Route>
       </Routes>

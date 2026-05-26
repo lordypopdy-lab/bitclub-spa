@@ -18,37 +18,70 @@ const AddFundsScreen = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div style={{ background: "#0a0b0d", minHeight: "100vh", color: "#fff", paddingBottom: 90 }}>
+    <div
+      style={{
+        background: "#0a0b0d",
+        minHeight: "100vh",
+        color: "#fff",
+        paddingBottom: 90,
+      }}
+    >
       <div style={{ padding: "16px 18px" }}>
         <Link
-          to={-1}
-          style={{ background: "transparent", border: "none", color: "#fff", padding: 0 }}
+          onClick={() => navigate(-1)}
+          style={{
+            background: "transparent",
+            border: "none",
+            color: "#fff",
+            padding: 0,
+          }}
         >
           <FiArrowLeft size={22} />
         </Link>
 
-        <h1 style={{ fontSize: 30, fontWeight: 700, marginTop: 24 }}>Add funds</h1>
+        <h1 style={{ fontSize: 30, fontWeight: 700, marginTop: 24 }}>
+          Add funds
+        </h1>
 
-        <div style={{ display: "flex", alignItems: "flex-start", gap: 12, marginTop: 18 }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: 12,
+            marginTop: 18,
+          }}
+        >
           <FaUniversity size={22} color="#cfd2d8" />
           <div style={{ color: "#cfd2d8", fontSize: 14, lineHeight: 1.5 }}>
-            Your assets are guaranteed by the Bitclub Protection Fund
+            Your assets are guaranteed by the Bitget Protection Fund
           </div>
         </div>
 
-        <div style={{ height: 1, background: "#1c1f23", margin: "22px 0 12px" }} />
+        <div
+          style={{ height: 1, background: "#1c1f23", margin: "22px 0 12px" }}
+        />
 
-        <div style={{ fontSize: 19, fontWeight: 700, marginTop: 8 }}>I have crypto assets</div>
+        <div style={{ fontSize: 19, fontWeight: 700, marginTop: 8 }}>
+          I have crypto assets
+        </div>
 
         <ActionCard
           title="Deposit crypto"
           subtitle="Add crypto funds to your Bitget account"
-          onClick={() => navigate("/buy-sell")}
+          onClick={() => navigate("/deposit-crypto")}
         />
 
-        <div style={{ height: 1, background: "#1c1f23", margin: "8px 0 18px" }} />
+        <div
+          style={{ height: 1, background: "#1c1f23", margin: "8px 0 18px" }}
+        />
 
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
           <div style={{ fontSize: 19, fontWeight: 700 }}>Buy crypto with</div>
           <div style={{ position: "relative" }}>
             <button
@@ -116,13 +149,13 @@ const AddFundsScreen = () => {
           title="P2P trading"
           badge="Rewards"
           subtitle="Buy crypto with 0 fees and get USDT rewards!"
-          onClick={() => navigate({ to: "/buy-sell" })}
+          onClick={() => navigate("/p2p")}
         />
         <ActionCard
           title="Bank Transfer"
           badge="Hot"
           subtitle="Top up fiat balance via bank transfer"
-          onClick={() => navigate( "/buy-sell")}
+          onClick={() => navigate("/bank-transfer")}
         />
       </div>
       <MenubarFooter />
