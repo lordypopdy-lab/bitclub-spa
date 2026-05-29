@@ -39,7 +39,7 @@ const AddFundsScreen = () => {
           <FiArrowLeft size={22} />
         </Link>
 
-        <h1 style={{ fontSize: 30, fontWeight: 700, marginTop: 24 }}>
+        <h1 style={{ fontSize: 27, fontWeight: 600, marginTop: 24 }}>
           Add funds
         </h1>
 
@@ -52,7 +52,7 @@ const AddFundsScreen = () => {
           }}
         >
           <FaUniversity size={22} color="#cfd2d8" />
-          <div style={{ color: "#cfd2d8", fontSize: 14, lineHeight: 1.5 }}>
+          <div style={{ color: "#cfd2d8", fontSize: 12, lineHeight: 1 }}>
             Your assets are guaranteed by the Bitget Protection Fund
           </div>
         </div>
@@ -61,12 +61,13 @@ const AddFundsScreen = () => {
           style={{ height: 1, background: "#1c1f23", margin: "22px 0 12px" }}
         />
 
-        <div style={{ fontSize: 19, fontWeight: 700, marginTop: 8 }}>
+        <div style={{ fontSize: 15, fontWeight: 600, marginTop: 8 }}>
           I have crypto assets
         </div>
 
         <ActionCard
           title="Deposit crypto"
+          fontSize={10}
           subtitle="Add crypto funds to your Bitget account"
           onClick={() => navigate("/deposit-crypto")}
         />
@@ -82,7 +83,7 @@ const AddFundsScreen = () => {
             justifyContent: "space-between",
           }}
         >
-          <div style={{ fontSize: 19, fontWeight: 700 }}>Buy crypto with</div>
+          <div style={{ fontSize: 15, fontWeight: 600 }}>Buy crypto with</div>
           <div style={{ position: "relative" }}>
             <button
               onClick={() => setOpen((v) => !v)}
@@ -142,18 +143,24 @@ const AddFundsScreen = () => {
         <ActionCard
           title="Buy / Sell"
           badge="New Sell Feature"
+          fontSize={10}
+          fontWeight={500}
           subtitle="Buy and sell crypto instantly"
           onClick={() => navigate("/buy-sell")}
         />
         <ActionCard
           title="P2P trading"
           badge="Rewards"
+          fontSize={10}
+          fontWeight={500}
           subtitle="Buy crypto with 0 fees and get USDT rewards!"
           onClick={() => navigate("/p2p")}
         />
         <ActionCard
           title="Bank Transfer"
           badge="Hot"
+          fontSize={10}
+          fontWeight={500}
           subtitle="Top up fiat balance via bank transfer"
           onClick={() => navigate("/bank-transfer")}
         />
