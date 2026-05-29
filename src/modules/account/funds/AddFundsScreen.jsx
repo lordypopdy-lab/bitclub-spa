@@ -23,7 +23,7 @@ const AddFundsScreen = () => {
         background: "#0a0b0d",
         minHeight: "100vh",
         color: "#fff",
-        paddingBottom: 90,
+        paddingBottom: 20,
       }}
     >
       <div style={{ padding: "16px 18px" }}>
