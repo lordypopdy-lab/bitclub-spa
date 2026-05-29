@@ -15,7 +15,12 @@ const P2PExpressScreen = () => {
   const [pay, setPay] = useState("");
   const [receive, setReceive] = useState("");
   const [fiat, setFiat] = useState({ code: "NGN", icon: "₦", bg: "#16a34a" });
-  const [crypto, setCrypto] = useState({ symbol: "USDT", name: "Tether", icon: "₮", bg: "#26a17b" });
+  const [crypto, setCrypto] = useState({
+    symbol: "USDT",
+    name: "Tether",
+    icon: "₮",
+    bg: "#26a17b",
+  });
   const [sheet, setSheet] = useState(null);
 
   const onPay = (v) => {
@@ -39,27 +44,60 @@ const P2PExpressScreen = () => {
   const payCurrency = isBuy ? fiat : crypto;
   const receiveCurrency = isBuy ? crypto : fiat;
 
-  const cta = useMemo(() => (isBuy ? `Buy ${crypto.symbol}` : `Sell ${crypto.symbol}`), [isBuy, crypto.symbol]);
+  const cta = useMemo(
+    () => (isBuy ? `Buy ${crypto.symbol}` : `Sell ${crypto.symbol}`),
+    [isBuy, crypto.symbol],
+  );
 
   return (
-    <div style={{ background: "#0a0b0d", minHeight: "100vh", color: "#fff", paddingBottom: 100 }}>
+    <div
+      style={{
+        background: "#0a0b0d",
+        minHeight: "100vh",
+        color: "#fff",
+        paddingBottom: 100,
+      }}
+    >
       <ScreenHeader
         title={
           <div style={{ display: "flex", gap: 22, justifyContent: "center" }}>
-            <span onClick={() => navigate("/p2p")} style={{ color: "#7d828a", fontWeight: 700, fontSize: 18, cursor: "pointer" }}>P2P</span>
-            <span style={{ color: "#fff", fontWeight: 700, fontSize: 18 }}>Express</span>
+            <span
+              onClick={() => navigate("/p2p")}
+              style={{
+                color: "#7d828a",
+                fontWeight: 600,
+                fontSize: 16,
+                cursor: "pointer",
+              }}
+            >
+              P2P
+            </span>
+            <span style={{ color: "#fff", fontWeight: 600, fontSize: 16 }}>
+              Express
+            </span>
           </div>
         }
         right={
           <>
-            <BsQuestionCircle size={18} style={{ cursor: "pointer" }} onClick={() => navigate("/faq")} />
+            <BsQuestionCircle
+              size={18}
+              style={{ cursor: "pointer" }}
+              onClick={() => navigate("/faq")}
+            />
             <BsBellSlash size={18} />
           </>
         }
       />
 
       <div style={{ padding: "8px 16px 0" }}>
-        <div style={{ display: "inline-flex", background: "#15171b", borderRadius: 6, padding: 3 }}>
+        <div
+          style={{
+            display: "inline-flex",
+            background: "#15171b",
+            borderRadius: 6,
+            padding: 3,
+          }}
+        >
           {["Buy", "Sell"].map((b) => {
             const a = side === b;
             return (
@@ -70,7 +108,15 @@ const P2PExpressScreen = () => {
                   setPay("");
                   setReceive("");
                 }}
-                style={{ border: "none", background: a ? "#26292f" : "transparent", color: a ? "#fff" : "#7d828a", padding: "6px 18px", borderRadius: 4, fontSize: 14, fontWeight: 600 }}
+                style={{
+                  border: "none",
+                  background: a ? "#26292f" : "transparent",
+                  color: a ? "#fff" : "#7d828a",
+                  padding: "6px 18px",
+                  borderRadius: 4,
+                  fontSize: 14,
+                  fontWeight: 600,
+                }}
               >
                 {b}
               </Link>
@@ -79,8 +125,10 @@ const P2PExpressScreen = () => {
         </div>
       </div>
 
-      <div style={{ padding: "20px 16px 0" }}>
-        <div style={{ fontWeight: 700, fontSize: 17 }}>{isBuy ? "Pay" : "I want to sell"}</div>
+      <div style={{ padding: "17px 14px 0" }}>
+        <div style={{ fontWeight: 600, fontSize: 16 }}>
+          {isBuy ? "Pay" : "I want to sell"}
+        </div>
         <InputBox
           value={pay}
           onChange={onPay}
@@ -90,15 +138,27 @@ const P2PExpressScreen = () => {
           showMax={!isBuy}
         />
         {!isBuy && (
-          <div style={{ display: "flex", justifyContent: "space-between", marginTop: 6, fontSize: 12 }}>
-            <span style={{ color: "#7d828a", borderBottom: "1px dashed #3a3d42" }}>Available balance <span style={{ color: "#fff" }}>0</span> {crypto.symbol}</span>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: 6,
+              fontSize: 12,
+            }}
+          >
+            <span
+              style={{ color: "#7d828a", borderBottom: "1px dashed #3a3d42" }}
+            >
+              Available balance <span style={{ color: "#fff" }}>0</span>{" "}
+              {crypto.symbol}
+            </span>
             <span style={{ color: "#00d1c1" }}>Transfer</span>
           </div>
         )}
       </div>
 
       <div style={{ padding: "20px 16px 0" }}>
-        <div style={{ fontWeight: 700, fontSize: 17 }}>Receive</div>
+        <div style={{ fontWeight: 600, fontSize: 16 }}>Receive</div>
         <InputBox
           value={receive}
           onChange={onReceive}
@@ -107,7 +167,8 @@ const P2PExpressScreen = () => {
           onCurrencyClick={() => setSheet(isBuy ? "crypto" : "fiat")}
         />
         <div style={{ color: "#7d828a", fontSize: 12, marginTop: 6 }}>
-          Reference price: 1 {crypto.symbol} ≈ {RATE.toLocaleString()} {fiat.code}
+          Reference price: 1 {crypto.symbol} ≈ {RATE.toLocaleString()}{" "}
+          {fiat.code}
         </div>
       </div>
 
@@ -119,7 +180,7 @@ const P2PExpressScreen = () => {
             background: isBuy ? "#00d1c1" : "#ff3b73",
             color: "#fff",
             border: "none",
-            padding: "14px",
+            padding: "12px",
             borderRadius: 8,
             fontWeight: 700,
             fontSize: 16,
@@ -129,15 +190,35 @@ const P2PExpressScreen = () => {
         </button>
       </div>
 
-      <SelectListSheet open={sheet === "fiat"} title="Select fiat" items={FIATS} onSelect={setFiat} onClose={() => setSheet(null)} />
-      <SelectListSheet open={sheet === "crypto"} title="Select crypto" items={P2P_CRYPTOS} onSelect={setCrypto} onClose={() => setSheet(null)} showSearch={false} />
+      <SelectListSheet
+        open={sheet === "fiat"}
+        title="Select fiat"
+        items={FIATS}
+        onSelect={setFiat}
+        onClose={() => setSheet(null)}
+      />
+      <SelectListSheet
+        open={sheet === "crypto"}
+        title="Select crypto"
+        items={P2P_CRYPTOS}
+        onSelect={setCrypto}
+        onClose={() => setSheet(null)}
+        showSearch={false}
+      />
 
       <P2PBottomNav />
     </div>
   );
 };
 
-const InputBox = ({ value, onChange, placeholder, currency, onCurrencyClick, showMax }) => (
+const InputBox = ({
+  value,
+  onChange,
+  placeholder,
+  currency,
+  onCurrencyClick,
+  showMax,
+}) => (
   <div
     style={{
       marginTop: 10,
@@ -155,14 +236,40 @@ const InputBox = ({ value, onChange, placeholder, currency, onCurrencyClick, sho
       value={value}
       onChange={(e) => onChange(e.target.value.replace(/[^\d.]/g, ""))}
       placeholder={placeholder}
-      style={{ background: "transparent", border: "none", color: "#fff", outline: "none", flex: 1, fontSize: 15 }}
+      style={{
+        background: "transparent",
+        border: "none",
+        color: "#fff",
+        outline: "none",
+        flex: 1,
+        fontSize: 15,
+      }}
     />
     {showMax && <span style={{ color: "#00d1c1", fontWeight: 600 }}>Max</span>}
     <Link
       onClick={onCurrencyClick}
-      style={{ background: "transparent", border: "none", color: "#fff", display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 700 }}
+      style={{
+        background: "transparent",
+        border: "none",
+        color: "#fff",
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 6,
+        fontWeight: 700,
+      }}
     >
-      <div style={{ width: 22, height: 22, borderRadius: "50%", background: currency.bg, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 11 }}>
+      <div
+        style={{
+          width: 22,
+          height: 22,
+          borderRadius: "50%",
+          background: currency.bg,
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: 11,
+        }}
+      >
         {currency.icon}
       </div>
       {currency.code || currency.symbol}

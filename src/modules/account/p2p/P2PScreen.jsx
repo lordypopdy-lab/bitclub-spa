@@ -144,7 +144,7 @@ const P2PScreen = () => {
         >
           <div style={{ fontSize: 22 }}>🎁</div>
           <div
-            style={{ flex: 1, fontSize: 14, fontWeight: 600, lineHeight: 1.35 }}
+            style={{ flex: 1, fontSize: 12, fontWeight: 600, lineHeight: 1.35 }}
           >
             Get Up to 50% Cash Back on P2P Deposits — Limited Time!
           </div>
@@ -208,7 +208,7 @@ const P2PScreen = () => {
               alignItems: "center",
               justifyContent: "center",
               fontSize: 11,
-              fontWeight: 700,
+              fontWeight: 500,
             }}
           >
             {crypto.icon}
@@ -243,12 +243,12 @@ const P2PScreen = () => {
             alignItems: "center",
           }}
         >
-          <div style={{ fontSize: 17, fontWeight: 700 }}>
+          <div style={{ fontSize: 14, fontWeight: 500 }}>
             Beginner-friendly ads
           </div>
           <div style={{ color: "#7d828a", fontSize: 13 }}>More ›</div>
         </div>
-        <div style={{ color: "#7d828a", fontSize: 13, marginTop: 4 }}>
+        <div style={{ color: "#7d828a", fontSize: 11, marginTop: 4 }}>
           Handpicked ads tailored for new users.
         </div>
       </div>
@@ -318,8 +318,8 @@ const FeaturedCard = ({ offer, side, fiat, onClick }) => (
         display: "flex",
         alignItems: "center",
         gap: 6,
-        fontSize: 13,
-        fontWeight: 600,
+        fontSize: 12,
+        fontWeight: 500,
       }}
     >
       <span
@@ -339,17 +339,17 @@ const FeaturedCard = ({ offer, side, fiat, onClick }) => (
       </span>
       {offer.merchant} <span style={{ color: "#00d1c1" }}>✦</span>
     </div>
-    <div style={{ fontSize: 26, fontWeight: 700, marginTop: 8 }}>
+    <div style={{ fontSize: 20, fontWeight: 500, marginTop: 8, marginBottom: 4 }}>
       {fiat.icon}
       {offer.price.toLocaleString()}
     </div>
-    <div style={{ color: "#7d828a", fontSize: 12, marginTop: 6 }}>
+    <div style={{ color: "#7d828a", fontSize: 10, marginTop: 6, marginBottom: 2 }}>
       Quantity{" "}
       <span style={{ color: "#cfd2d8" }}>
         {offer.available} {offer.crypto}
       </span>
     </div>
-    <div style={{ color: "#7d828a", fontSize: 12 }}>
+    <div style={{ color: "#7d828a", fontSize: 10, margin: "4px 0" }}>
       Limit{" "}
       <span style={{ color: "#cfd2d8" }}>
         {offer.limitMin} - {offer.limitMax.toLocaleString()} {fiat.code}
@@ -358,7 +358,7 @@ const FeaturedCard = ({ offer, side, fiat, onClick }) => (
     <div
       style={{
         color: "#cfd2d8",
-        fontSize: 12,
+        fontSize: 10,
         marginTop: 4,
         display: "flex",
         alignItems: "center",
@@ -409,7 +409,7 @@ const OfferRow = ({ offer, side, fiat, onClick }) => (
           display: "inline-flex",
           alignItems: "center",
           justifyContent: "center",
-          fontSize: 12,
+          fontSize: 11,
         }}
       >
         {offer.merchant[0]}
@@ -423,15 +423,15 @@ const OfferRow = ({ offer, side, fiat, onClick }) => (
           marginTop: 8,
           border: "1px solid #00d1c1",
           color: "#00d1c1",
-          fontSize: 11,
-          padding: "2px 6px",
+          fontSize: 10,
+          padding: "1px 4px",
           borderRadius: 4,
         }}
       >
         Beginner-friendly
       </div>
     )}
-    <div style={{ color: "#7d828a", fontSize: 12, marginTop: 8 }}>
+    <div style={{ color: "#7d828a", fontSize: 10, marginTop: 8 }}>
       Orders{" "}
       <span style={{ color: "#cfd2d8" }}>
         {offer.orders}({offer.completion}%)
@@ -440,17 +440,17 @@ const OfferRow = ({ offer, side, fiat, onClick }) => (
         ⌛ {offer.avgTime} min
       </span>
     </div>
-    <div style={{ fontSize: 26, fontWeight: 700, marginTop: 8 }}>
+    <div style={{ fontSize: 20, fontWeight: 500, marginTop: 8 }}>
       {fiat.icon}
       {offer.price.toLocaleString()}
     </div>
-    <div style={{ color: "#7d828a", fontSize: 13, marginTop: 6 }}>
+    <div style={{ color: "#7d828a", fontSize: 10, marginTop: 6 }}>
       Quantity{" "}
       <span style={{ color: "#cfd2d8" }}>
         {offer.available} {offer.crypto}
       </span>
     </div>
-    <div style={{ color: "#7d828a", fontSize: 13 }}>
+    <div style={{ color: "#7d828a", fontSize: 10 }}>
       Limit{" "}
       <span style={{ color: "#cfd2d8" }}>
         {offer.limitMin} - {offer.limitMax.toLocaleString()} {fiat.code}
@@ -467,7 +467,7 @@ const OfferRow = ({ offer, side, fiat, onClick }) => (
       <span
         style={{
           color: "#cfd2d8",
-          fontSize: 12,
+          fontSize: 11,
           display: "flex",
           alignItems: "center",
           gap: 6,
