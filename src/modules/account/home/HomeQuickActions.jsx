@@ -51,7 +51,7 @@ const HomeQuickActions = () => {
         </div>
       </div>
 
-      <div style={{ padding: "14px 16px 4px" }}>
+      <div style={{ padding: "8px 16px 4px" }}>
         <button
           onClick={() => navigate( "/add-funds")}
           style={{
@@ -60,8 +60,8 @@ const HomeQuickActions = () => {
             color: "#000",
             border: "none",
             borderRadius: 10,
-            padding: "14px",
-            fontWeight: 700,
+            padding: "12px",
+            fontWeight: 500,
             fontSize: 15,
           }}
         >
