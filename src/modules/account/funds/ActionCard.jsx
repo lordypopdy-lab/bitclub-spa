@@ -13,7 +13,7 @@ const ActionCard = ({ title, subtitle, badge, onClick }) => (
   >
     <div style={{ flex: 1 }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-        <span style={{ color: "#fff", fontSize: 17, fontWeight: 700 }}>{title}</span>
+        <span style={{ color: "#fff", fontSize: 14, fontWeight: 600 }}>{title}</span>
         {badge && (
           <span
             style={{
@@ -28,9 +28,9 @@ const ActionCard = ({ title, subtitle, badge, onClick }) => (
           </span>
         )}
       </div>
-      {subtitle && <div style={{ color: "#7d828a", fontSize: 13, marginTop: 6 }}>{subtitle}</div>}
+      {subtitle && <div style={{ color: "#dcdcdc", fontSize: 11, marginTop: 6 }}>{subtitle}</div>}
     </div>
-    <FiChevronRight color="#7d828a" size={20} />
+    <FiChevronRight color="#dcdcdc" size={20} />
   </div>
 );
 

@@ -22,12 +22,13 @@ const MenubarFooter = () => {
         bottom: 0,
         left: 0,
         right: 0,
-        background: "#0a0b0d",
-        borderTop: "1px solid #1c1f23",
+        background: "#000",
         display: "flex",
         justifyContent: "space-around",
         padding: "8px 4px calc(8px + env(safe-area-inset-bottom))",
         zIndex: 100,
+        borderTopRightRadius: "32px",
+        borderTopLeftRadius: "32px",
       }}
     >
       {items.map(({ to, label, Icon }) => {
