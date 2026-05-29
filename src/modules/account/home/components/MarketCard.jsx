@@ -23,7 +23,6 @@ const MarketCard = ({
       style={{
         flex: "1 0 47%",
         background: "linear-gradient(180deg,#0f1217 0%,#0a0c10 100%)",
-        border: "1px solid #181b21",
         borderRadius: 12,
         padding: "12px 14px",
         minWidth: 0,
@@ -44,7 +43,7 @@ const MarketCard = ({
             minWidth: 0,
           }}
         >
-          <span style={{ color: "#fff", fontWeight: 600, fontSize: 11 }}>
+          <span style={{ color: "#fff", fontWeight: 600, fontSize: 12 }}>
             {symbol}
           </span>
           <span style={{ color: "#7d828a", fontSize: 11 }}>{category}</span>
@@ -53,7 +52,7 @@ const MarketCard = ({
           color={up ? "#22c1c3" : "#ff5e7e"}
           seed={seed}
           up={up}
-          width={45}
+          width={43}
           height={22}
         />
       </div>

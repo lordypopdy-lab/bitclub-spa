@@ -4,7 +4,10 @@ import { HERO_CARDS } from "./data/mockData.js";
 const HomeCarousel = () => {
   const [idx, setIdx] = useState(0);
   useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % HERO_CARDS.length), 4000);
+    const t = setInterval(
+      () => setIdx((i) => (i + 1) % HERO_CARDS.length),
+      4000,
+    );
     return () => clearInterval(t);
   }, []);
   const c = HERO_CARDS[idx];
@@ -43,11 +46,27 @@ const HomeCarousel = () => {
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ color: "#7d828a", fontSize: 12 }}>{c.tag}</div>
-          <div style={{ color: "#fff", fontWeight: 700, fontSize: 15, marginTop: 4, lineHeight: 1.25 }}>
+          <div
+            style={{
+              color: "#fff",
+              fontWeight: 700,
+              fontSize: 15,
+              marginTop: 4,
+              lineHeight: 1.25,
+            }}
+          >
             {c.title}
           </div>
         </div>
-        <div style={{ position: "absolute", top: 10, right: 12, color: "#7d828a", fontSize: 11 }}>
+        <div
+          style={{
+            position: "absolute",
+            top: 10,
+            right: 12,
+            color: "#7d828a",
+            fontSize: 11,
+          }}
+        >
           {idx + 1}/{HERO_CARDS.length}
         </div>
       </div>
