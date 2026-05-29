@@ -53,7 +53,7 @@ const MarketCard = ({
           color={up ? "#22c1c3" : "#ff5e7e"}
           seed={seed}
           up={up}
-          width={50}
+          width={47}
           height={22}
         />
       </div>
