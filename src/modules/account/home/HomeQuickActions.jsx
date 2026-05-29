@@ -17,7 +17,7 @@ const HomeQuickActions = () => {
   return (
     <>
       <div style={{ padding: "16px 16px 6px" }}>
-        <div style={{ color: "#fff", fontWeight: 700, fontSize: 16, marginBottom: 10 }}>
+        <div style={{ color: "#fff", fontWeight: 600, fontSize: 14, marginBottom: 10 }}>
           Get started with Bitclub!
         </div>
         <div
@@ -51,7 +51,7 @@ const HomeQuickActions = () => {
         </div>
       </div>
 
-      <div style={{ padding: "8px 16px 4px" }}>
+      <div style={{ padding: "2px 14px 4px" }}>
         <button
           onClick={() => navigate( "/add-funds")}
           style={{
