@@ -60,7 +60,7 @@ const HomeQuickActions = () => {
             color: "#000",
             border: "none",
             borderRadius: 10,
-            padding: "12px",
+            padding: "13px",
             fontWeight: 500,
             fontSize: 15,
           }}

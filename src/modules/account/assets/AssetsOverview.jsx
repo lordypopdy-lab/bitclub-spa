@@ -29,9 +29,9 @@ const AssetsOverview = () => {
             color: "#000",
             border: "none",
             borderRadius: 10,
-            padding: "16px",
-            fontWeight: 700,
-            fontSize: 16,
+            padding: "13px",
+            fontWeight: 600,
+            fontSize: 14,
             cursor: "pointer",
           }}
         >
