@@ -255,7 +255,7 @@ const InputBox = ({
         display: "inline-flex",
         alignItems: "center",
         gap: 6,
-        fontWeight: 700,
+        fontWeight: 600,
       }}
     >
       <div

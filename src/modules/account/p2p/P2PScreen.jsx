@@ -343,13 +343,13 @@ const FeaturedCard = ({ offer, side, fiat, onClick }) => (
       {fiat.icon}
       {offer.price.toLocaleString()}
     </div>
-    <div style={{ color: "#7d828a", fontSize: 10, marginTop: 6, marginBottom: 2 }}>
+    <div style={{ color: "#7d828a", fontSize: 11, marginTop: 6, marginBottom: 2 }}>
       Quantity{" "}
       <span style={{ color: "#cfd2d8" }}>
         {offer.available} {offer.crypto}
       </span>
     </div>
-    <div style={{ color: "#7d828a", fontSize: 10, margin: "4px 0" }}>
+    <div style={{ color: "#7d828a", fontSize: 11, margin: "4px 0" }}>
       Limit{" "}
       <span style={{ color: "#cfd2d8" }}>
         {offer.limitMin} - {offer.limitMax.toLocaleString()} {fiat.code}
@@ -358,7 +358,7 @@ const FeaturedCard = ({ offer, side, fiat, onClick }) => (
     <div
       style={{
         color: "#cfd2d8",
-        fontSize: 10,
+        fontSize: 11,
         marginTop: 4,
         display: "flex",
         alignItems: "center",
@@ -423,7 +423,7 @@ const OfferRow = ({ offer, side, fiat, onClick }) => (
           marginTop: 8,
           border: "1px solid #00d1c1",
           color: "#00d1c1",
-          fontSize: 10,
+          fontSize: 11,
           padding: "1px 4px",
           borderRadius: 4,
         }}
@@ -431,7 +431,7 @@ const OfferRow = ({ offer, side, fiat, onClick }) => (
         Beginner-friendly
       </div>
     )}
-    <div style={{ color: "#7d828a", fontSize: 10, marginTop: 8 }}>
+    <div style={{ color: "#7d828a", fontSize: 11, marginTop: 8 }}>
       Orders{" "}
       <span style={{ color: "#cfd2d8" }}>
         {offer.orders}({offer.completion}%)
@@ -444,13 +444,13 @@ const OfferRow = ({ offer, side, fiat, onClick }) => (
       {fiat.icon}
       {offer.price.toLocaleString()}
     </div>
-    <div style={{ color: "#7d828a", fontSize: 10, marginTop: 6 }}>
+    <div style={{ color: "#7d828a", fontSize: 11, marginTop: 6 }}>
       Quantity{" "}
       <span style={{ color: "#cfd2d8" }}>
         {offer.available} {offer.crypto}
       </span>
     </div>
-    <div style={{ color: "#7d828a", fontSize: 10 }}>
+    <div style={{ color: "#7d828a", fontSize: 11 }}>
       Limit{" "}
       <span style={{ color: "#cfd2d8" }}>
         {offer.limitMin} - {offer.limitMax.toLocaleString()} {fiat.code}
@@ -467,7 +467,7 @@ const OfferRow = ({ offer, side, fiat, onClick }) => (
       <span
         style={{
           color: "#cfd2d8",
-          fontSize: 11,
+          fontSize: 12,
           display: "flex",
           alignItems: "center",
           gap: 6,
