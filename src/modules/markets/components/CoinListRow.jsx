@@ -18,7 +18,6 @@ const CoinListRow = ({ coin, starred, showLeverage }) => {
         display: "flex",
         alignItems: "center",
         padding: "14px 0",
-        borderBottom: "1px solid #14171b",
         gap: 12,
       }}
     >
