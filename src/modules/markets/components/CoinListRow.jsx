@@ -25,8 +25,10 @@ const CoinListRow = ({ coin, starred, showLeverage }) => {
       <CoinAvatar symbol={coin.symbol} />
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <span style={{ color: "#fff", fontWeight: 700, fontSize: 16 }}>{coin.symbol}</span>
-          <span style={{ color: "#7d828a", fontSize: 14 }}>/ {coin.quote}</span>
+          <span style={{ color: "#fff", fontWeight: 500, fontSize: 14 }}>
+            {coin.symbol}
+          </span>
+          <span style={{ color: "#7d828a", fontSize: 13 }}>/ {coin.quote}</span>
           {showLeverage && coin.leverage && (
             <span
               style={{
@@ -35,18 +37,27 @@ const CoinListRow = ({ coin, starred, showLeverage }) => {
                 border: "1px solid #2a2e34",
                 borderRadius: 4,
                 padding: "1px 5px",
-                fontWeight: 600,
+                fontWeight: 500,
               }}
             >
               {coin.leverage}x
             </span>
           )}
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 2 }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 6,
+            marginTop: 2,
+          }}
+        >
           {starred && <FaStar size={10} color="#f7c948" />}
           <span style={{ color: "#7d828a", fontSize: 12 }}>{coin.volume}</span>
           {coin.badge && (
-            <span style={{ color: "#22d3ee", fontSize: 12, fontWeight: 500 }}>{coin.badge}</span>
+            <span style={{ color: "#22d3ee", fontSize: 12, fontWeight: 500 }}>
+              {coin.badge}
+            </span>
           )}
         </div>
       </div>
@@ -54,21 +65,23 @@ const CoinListRow = ({ coin, starred, showLeverage }) => {
         <div
           style={{
             color: "#fff",
-            fontWeight: 700,
-            fontSize: 15,
+            fontWeight: 500,
+            fontSize: 14,
             fontVariantNumeric: "tabular-nums",
             transition: "color .4s",
           }}
         >
           {fmtPrice(coin.price)}
         </div>
-        <div style={{ color: "#7d828a", fontSize: 12 }}>€{fmtPrice(coin.fiat)}</div>
+        <div style={{ color: "#7d828a", fontSize: 12 }}>
+          €{fmtPrice(coin.fiat)}
+        </div>
       </div>
       <div
         style={{
           background: positive ? "#22d3c5" : "#ff5577",
           color: "#000",
-          fontWeight: 700,
+          fontWeight: 500,
           padding: "8px 0",
           borderRadius: 8,
           fontSize: 13,
