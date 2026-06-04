@@ -29,6 +29,7 @@ import BankTransferScreen from "../modules/account/deposit/components/BankTransf
 import DepositHistoryScreen from "../modules/account/deposit/components/DepositHistoryScreen";
 
 import ProtectedRoute from "../routes/ProtectedRoute";
+import Notifications from "../modules/notifications/Notifications";
 
 export default function Router() {
   return (
@@ -61,6 +62,7 @@ export default function Router() {
             <Route path="/buy-sell" element={<BuySellScreen />} />
             <Route path="/p2p-orders" element={<OrdersScreen />} />
             <Route path="/add-funds" element={<AddFundsScreen />} />
+            <Route path="/notifications" element={<Notifications />} />
             <Route path="/p2p-express" element={<P2PExpressScreen />} />
             <Route path="/deposit-crypto" element={<SelectCoinScreen />} />
             <Route path="/bank-transfer" element={<BankTransferScreen />} />

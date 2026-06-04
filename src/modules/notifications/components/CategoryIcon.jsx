@@ -8,11 +8,11 @@ import {
   FiFileText,
 } from "react-icons/fi";
 import { HiSpeakerphone } from "react-icons/hi";
-import { BsConfetti } from "react-icons/bs";
+import { GiPartyPopper } from "react-icons/gi";
 
-const map = {
+const iconMap = {
   megaphone: HiSpeakerphone,
-  party: BsConfetti,
+  party: GiPartyPopper,
   news: FiFileText,
   chart: FiTrendingUp,
   sparkle: FiStar,
@@ -22,7 +22,8 @@ const map = {
 };
 
 const CategoryIcon = ({ name, color = "#cfd2d6", size = 18 }) => {
-  const Cmp = map[name] || FiBell;
+  const IconComponent = iconMap[name] || FiBell;
+
   return (
     <div
       style={{
@@ -36,7 +37,7 @@ const CategoryIcon = ({ name, color = "#cfd2d6", size = 18 }) => {
         flexShrink: 0,
       }}
     >
-      <Cmp size={size} color={color} />
+      <IconComponent size={size} color={color} />
     </div>
   );
 };

@@ -7,13 +7,13 @@ const NotificationHeader = ({
   title,
   onAction,
   actionIcon,
-  fallback = "/",
+  fallback = -1,
 }) => {
   const navigate = useNavigate();
   const back = () => {
     if (typeof window !== "undefined" && window.history.length > 1)
       window.history.back();
-    else navigate({ to: fallback });
+    else navigate( fallback );
   };
   return (
     <div

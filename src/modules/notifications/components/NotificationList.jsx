@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "@tanstack/react-router";
+import { useNavigate } from "react-router-dom";
 import { categories } from "../data/mockData.js";
 import NotificationItem from "./NotificationItem.jsx";
 
@@ -13,7 +13,7 @@ const NotificationList = ({ store }) => {
           category={{ ...c, unread: store.unreadCount(c.key) }}
           onClick={() => {
             store.markAllRead(c.key);
-            navigate({ to: c.path });
+            navigate( c.path );
           }}
         />
       ))}
