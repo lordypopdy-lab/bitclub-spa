@@ -11,7 +11,6 @@ const MenubarFooter = () => {
     { to: "/home", label: "Home", Icon: FiHome },
     { to: "/markets", label: "Markets", Icon: BsBarChartLine },
     { to: "/p2p", label: "Trade", Icon: BsArrowLeftRight },
-    { to: "/tradfi", label: "TradFi", Icon: MdAccountBalance },
     { to: "/assets", label: "Assets", Icon: HiOutlineWallet },
   ];
 
@@ -27,8 +26,8 @@ const MenubarFooter = () => {
         justifyContent: "space-around",
         padding: "8px 4px calc(8px + env(safe-area-inset-bottom))",
         zIndex: 100,
-        borderTopRightRadius: "32px",
-        borderTopLeftRadius: "32px",
+        borderTopRightRadius: "37px",
+        borderTopLeftRadius: "37px",
       }}
     >
       {items.map(({ to, label, Icon }) => {
@@ -47,16 +46,16 @@ const MenubarFooter = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              gap: 4,
+              gap: -3,
               color,
               textDecoration: "none",
-              fontSize: 11,
+              fontSize: 12,
               flex: 1,
               transition: "all 0.2s ease",
             }}
           >
             <Icon
-              size={22}
+              size={24}
               style={{
                 transform: active ? "scale(1.05)" : "scale(1)",
                 transition: "0.2s",
