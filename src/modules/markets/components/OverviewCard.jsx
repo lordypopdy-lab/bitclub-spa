@@ -37,7 +37,7 @@ const OverviewCard = ({ symbol, price, change, spark }) => {
         >
           {fmt(price)}
         </div>
-        <div style={{ color, fontSize: 11, fontWeight: 500, marginTop: 2 }}>
+        <div style={{ color, fontSize: 12, fontWeight: 500, marginTop: 2 }}>
           {positive ? "+" : ""}
           {change.toFixed(2)}%
         </div>
