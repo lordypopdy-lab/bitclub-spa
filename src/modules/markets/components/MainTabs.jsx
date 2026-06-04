@@ -33,7 +33,7 @@ const MainTabs = ({ tabs, active, onChange }) => {
               border: "none",
               color: isActive ? "#fff" : "#7d828a",
               fontWeight: isActive ? 600 : 500,
-              fontSize: isActive ? 17 : 14,
+              fontSize: isActive ? 18 : 15,
               padding: 0,
               whiteSpace: "nowrap",
               cursor: "pointer",

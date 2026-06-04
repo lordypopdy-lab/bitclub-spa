@@ -15,7 +15,6 @@ const OverviewCard = ({ symbol, price, change, spark }) => {
     <div
       style={{
         background: "linear-gradient(160deg,#15171a 0%,#0f1114 100%)",
-        border: "1px solid #1c1f23",
         borderRadius: 14,
         padding: 12,
         minHeight: 120,
@@ -31,14 +30,14 @@ const OverviewCard = ({ symbol, price, change, spark }) => {
         <div
           style={{
             color: "#fff",
-            fontSize: 17,
-            fontWeight: 600,
+            fontSize: 14,
+            fontWeight: 500,
             letterSpacing: "-0.01em",
           }}
         >
           {fmt(price)}
         </div>
-        <div style={{ color, fontSize: 12, fontWeight: 600, marginTop: 2 }}>
+        <div style={{ color, fontSize: 11, fontWeight: 500, marginTop: 2 }}>
           {positive ? "+" : ""}
           {change.toFixed(2)}%
         </div>
