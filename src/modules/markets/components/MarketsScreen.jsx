@@ -78,7 +78,7 @@ const MarketsScreen = () => {
               marginBottom: 4,
             }}
           >
-            <div style={{ fontSize: 18, fontWeight: 800, color: "#fff" }}>Crypto</div>
+            <div style={{ fontSize: 16, fontWeight: 600, color: "#fff" }}>Crypto</div>
             <FiChevronRight color="#7d828a" />
           </div>
           {filt(live).slice(0, 6).map((c) => (
