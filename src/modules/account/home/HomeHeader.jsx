@@ -68,7 +68,7 @@ const HomeHeader = () => {
           <FiHeadphones size={20} />
         </Link>
         <Link
-          onClick={() => navigate( "/notifications")}
+          to="/notifications"
           aria-label="Notifications"
           style={{
             background: "transparent",
