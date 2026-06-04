@@ -10,7 +10,7 @@ const MenubarFooter = () => {
   const items = [
     { to: "/home", label: "Home", Icon: FiHome },
     { to: "/markets", label: "Markets", Icon: BsBarChartLine },
-    { to: "/buy-sell", label: "Trade", Icon: BsArrowLeftRight },
+    { to: "/p2p", label: "Trade", Icon: BsArrowLeftRight },
     { to: "/tradfi", label: "TradFi", Icon: MdAccountBalance },
     { to: "/assets", label: "Assets", Icon: HiOutlineWallet },
   ];

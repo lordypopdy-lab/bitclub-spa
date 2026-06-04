@@ -16,7 +16,10 @@ export const OVERVIEW_CARDS = [
   { symbol: "NAS100", price: 30059.98, change: 0.19 },
   { symbol: "Gold", price: 4501.27, change: -0.23 },
   { symbol: "EURUSD", price: 1.16411, change: 0.11 },
-].map((c) => ({ ...c, spark: seedSpark(c.price, 0.015, 22, c.change >= 0 ? 1 : -1) }));
+].map((c) => ({
+  ...c,
+  spark: seedSpark(c.price, 0.015, 22, c.change >= 0 ? 1 : -1),
+}));
 
 const make = (sym, quote, price, change, vol, badge) => ({
   id: `${sym}-${quote}`,
@@ -49,7 +52,7 @@ export const NEW_LISTINGS = [
   make("SLX", "USDT", 0.19467, 18.23, "12.16M", "Candybomb"),
   make("U", "USDT", 1.0012, 0.02, "637.5K", "New"),
   make("U", "USDC", 1.0001, 0.01, "440.81K", "New"),
-  make("NEX", "USDT", 0.000003421, -12.10, "526.74K", "Candybomb"),
+  make("NEX", "USDT", 0.000003421, -12.1, "526.74K", "Candybomb"),
   make("UP", "USDT", 0.1032, -7.61, "109.22K", "Candybomb"),
   make("HOOLI", "USDT", 0.003598, -26.27, "76.65K", "PoolX"),
   make("BABYSHARK", "USDT", 0.00958, 5.51, "78.4K"),
@@ -59,7 +62,7 @@ export const NEW_LISTINGS = [
 export const FUTURES_COINS = [
   make("BTC", "USDT", 75300.2, -1.88, "3.77B"),
   make("ETH", "USDT", 2062.12, -1.52, "2.07B"),
-  make("SOL", "USDT", 83.151, -1.40, "289.67M"),
+  make("SOL", "USDT", 83.151, -1.4, "289.67M"),
   make("XAU", "USDT", 4513.17, -0.39, "240.48M", "TradFi gold"),
   make("HYPE", "USDT", 60.213, 0.97, "220.53M"),
   make("WLD", "USDT", 0.3553, 4.44, "164.53M"),
@@ -112,7 +115,13 @@ export const PROMO_BANNERS = [
   },
 ];
 
-export const MAIN_TABS = ["Overview", "Favorites", "Crypto", "Stocks", "TradFi"];
+export const MAIN_TABS = [
+  "Overview",
+  "Favorites",
+  "Crypto",
+  "Stocks",
+  "TradFi",
+];
 
 export const SUB_TABS = {
   Overview: ["Hot", "Gainers", "Losers", "New", "Volume"],
@@ -127,14 +136,43 @@ export const FUTURES_FILTERS = ["All", "New", "Key Assets", "Meta"];
 export const MARGIN_FILTERS = ["All", "Key Assets", "Stablecoin", "AI", "Meme"];
 
 export const COIN_COLORS = {
-  BTC: "#f7931a", ETH: "#627eea", BGB: "#00d1c1", XRP: "#0d0d0d",
-  UNI: "#ff007a", DOGE: "#c2a633", SOL: "#9945ff", HYPE: "#22c55e",
-  USDC: "#2775ca", ICP: "#29abe2", BILL: "#3b82f6", XAUT: "#d4af37",
-  NEAR: "#000", SLX: "#7c3aed", U: "#fbbf24", NEX: "#64748b",
-  UP: "#84cc16", HOOLI: "#1e293b", BABYSHARK: "#fde047", PREOPAI: "#0891b2",
-  CTR: "#ef4444", NAS100: "#3b82f6", Gold: "#d4af37", EURUSD: "#22d3ee",
-  XAU: "#d4af37", WLD: "#ffffff", AAPL: "#a3a3a3", NVDA: "#76b900",
-  TSLA: "#cc0000", MSFT: "#00a4ef", META: "#0866ff", GOOGL: "#ea4335",
-  AMZN: "#ff9900", Silver: "#c0c0c0", Oil: "#1e293b", SPX500: "#10b981",
-  EUR: "#003399", GBP: "#012169", USD: "#3c3b6e",
+  BTC: "#f7931a",
+  ETH: "#627eea",
+  BGB: "#00d1c1",
+  XRP: "#0d0d0d",
+  UNI: "#ff007a",
+  DOGE: "#c2a633",
+  SOL: "#9945ff",
+  HYPE: "#22c55e",
+  USDC: "#2775ca",
+  ICP: "#29abe2",
+  BILL: "#3b82f6",
+  XAUT: "#d4af37",
+  NEAR: "#000",
+  SLX: "#7c3aed",
+  U: "#fbbf24",
+  NEX: "#64748b",
+  UP: "#84cc16",
+  HOOLI: "#1e293b",
+  BABYSHARK: "#fde047",
+  PREOPAI: "#0891b2",
+  CTR: "#ef4444",
+  NAS100: "#3b82f6",
+  Gold: "#d4af37",
+  EURUSD: "#22d3ee",
+  XAU: "#d4af37",
+  WLD: "#ffffff",
+  AAPL: "#a3a3a3",
+  NVDA: "#76b900",
+  TSLA: "#cc0000",
+  MSFT: "#00a4ef",
+  META: "#0866ff",
+  GOOGL: "#ea4335",
+  AMZN: "#ff9900",
+  Silver: "#c0c0c0",
+  Oil: "#1e293b",
+  SPX500: "#10b981",
+  EUR: "#003399",
+  GBP: "#012169",
+  USD: "#3c3b6e",
 };
