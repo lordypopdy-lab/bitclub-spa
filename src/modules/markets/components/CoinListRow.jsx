@@ -24,7 +24,7 @@ const CoinListRow = ({ coin, starred, showLeverage }) => {
       <CoinAvatar symbol={coin.symbol} />
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-          <span style={{ color: "#fff", fontWeight: 500, fontSize: 14 }}>
+          <span style={{ color: "#fff", fontWeight: 600, fontSize: 13 }}>
             {coin.symbol}
           </span>
           <span style={{ color: "#7d828a", fontSize: 13 }}>/ {coin.quote}</span>
@@ -64,8 +64,8 @@ const CoinListRow = ({ coin, starred, showLeverage }) => {
         <div
           style={{
             color: "#fff",
-            fontWeight: 500,
-            fontSize: 14,
+            fontWeight: 600,
+            fontSize: 13,
             fontVariantNumeric: "tabular-nums",
             transition: "color .4s",
           }}
