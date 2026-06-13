@@ -7,6 +7,7 @@ import {
   BsBuilding,
   BsGrid,
 } from "react-icons/bs";
+import { useOnboarding } from "../onboarding/hooks/useOnboarding.js";
 
 const ICONS = {
   Rewards: BsGift,
@@ -28,51 +29,23 @@ const items = [
 
 const HomeQuickActions = () => {
   const navigate = useNavigate();
-
-  const handleNavigation = (label) => {
-    switch (label) {
-      case "Rewards":
-        navigate("/rewards");
-        break;
-
-      case "Referral":
-        navigate("/referral");
-        break;
-
-      case "Earn":
-        navigate("/earn");
-        break;
-
-      case "Trading bots":
-        navigate("/trading-bots");
-        break;
-
-      case "IPO Prime":
-        navigate("/ipo-prime");
-        break;
-
-      case "More":
-        navigate("/more");
-        break;
-
-      default:
-        break;
-    }
-  };
+  const { state } = useOnboarding();
+  const pct = state.progress;
   return (
     <>
       <div style={{ padding: "16px 16px 6px" }}>
         <div
           style={{
             color: "#fff",
-            fontWeight: 600,
-            fontSize: 14,
+            fontWeight: 700,
+            fontSize: 16,
             marginBottom: 10,
           }}
         >
-          Get started with Bitclub!
+          Get started with Bitget!
         </div>
         <div
+          onClick={() => navigate("/onboarding/progress")}
           style={{
             background: "linear-gradient(180deg,#0f1217 0%,#0a0c10 100%)",
             border: "1px solid #181b21",
@@ -80,6 +53,7 @@ const HomeQuickActions = () => {
             padding: "18px 16px",
             position: "relative",
             overflow: "hidden",
+            cursor: "pointer",
           }}
         >
           <div
@@ -112,14 +86,26 @@ const HomeQuickActions = () => {
               }}
             >
               <div
-                style={{ width: "66%", height: "100%", background: "#22c1c3" }}
+                style={{
+                  width: `${pct}%`,
+                  height: "100%",
+                  background: "#22c1c3",
+                  transition: "width 500ms ease",
+                }}
               />
             </div>
             <div style={{ color: "#cfd2d6", fontSize: 12, fontWeight: 600 }}>
-              2/3
+              {state.completedSteps}/{state.totalSteps}
             </div>
           </div>
-          <div style={{ color: "#cfd2d6", fontSize: 13, marginTop: 10 }}>
+          <div
+            style={{
+              color: "#22c1c3",
+              fontSize: 13,
+              marginTop: 10,
+              fontWeight: 600,
+            }}
+          >
             View all steps ›
           </div>
           <div
@@ -130,7 +116,7 @@ const HomeQuickActions = () => {
         </div>
       </div>
 
-      <div style={{ padding: "2px 14px 4px" }}>
+      <div style={{ padding: "14px 16px 4px" }}>
         <button
           onClick={() => navigate("/add-funds")}
           style={{
@@ -139,9 +125,9 @@ const HomeQuickActions = () => {
             color: "#000",
             border: "none",
             borderRadius: 10,
-            padding: "13px",
-            fontWeight: 500,
-            fontSize: 15,
+            padding: "14px",
+            fontWeight: 600,
+            fontSize: 14,
           }}
         >
           Deposit
@@ -159,11 +145,12 @@ const HomeQuickActions = () => {
       >
         {items.map((label) => {
           const Icon = ICONS[label] || BsGrid;
-
+          const target =
+            label === "Rewards" || label === "Referral" ? "/rewards" : null;
           return (
             <div
               key={label}
-              onClick={() => handleNavigation(label)}
+              onClick={() => target && navigate( target )}
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -174,7 +161,6 @@ const HomeQuickActions = () => {
               }}
             >
               <Icon color="#fff" size={22} />
-
               <span
                 style={{
                   color: "#cfd2d6",

@@ -21,6 +21,7 @@ import P2PScreen from "../modules/account/p2p/P2PScreen";
 import Assets from "../modules/account/assets/Assets.jsx";
 import OrdersScreen from "../modules/account/p2p/OrdersScreen";
 import AddFundsScreen from "../modules/account/funds/AddFundsScreen";
+import ProgressPage from "../modules/account/onboarding/ProgressPage";
 import P2PExpressScreen from "../modules/account/p2p/P2PExpressScreen";
 import MarketsScreen from "../modules/markets/components/MarketsScreen";
 import BuySellScreen from "../modules/exchange/components/BuySellScreen";
@@ -65,6 +66,7 @@ export default function Router() {
             <Route path="/p2p-orders" element={<OrdersScreen />} />
             <Route path="/add-funds" element={<AddFundsScreen />} />
             <Route path="/notifications" element={<Notifications />} />
+            <Route path="/onboarding/progress" element={<ProgressPage />} />
             <Route path="/p2p-express" element={<P2PExpressScreen />} />
             <Route path="/deposit-crypto" element={<SelectCoinScreen />} />
             <Route path="/bank-transfer" element={<BankTransferScreen />} />
