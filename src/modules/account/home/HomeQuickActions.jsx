@@ -146,7 +146,9 @@ const HomeQuickActions = () => {
         {items.map((label) => {
           const Icon = ICONS[label] || BsGrid;
           const target =
-            label === "Rewards" || label === "Referral" ? "/rewards" : null;
+            label === "Rewards" ? "/rewards" : label === "Referral"
+              ? "/referral"
+              : null;
           return (
             <div
               key={label}

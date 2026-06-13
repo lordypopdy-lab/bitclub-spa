@@ -6,20 +6,27 @@ import Login from "../modules/auth/Login";
 import Send from "../modules/account/Send";
 import Earn from "../modules/account/Earn";
 //import Home from "../modules/account/Home";
-import Rewards from "../modules/rewards/Rewards";
 import Home from "../modules/account/home/Home";
 import Welcome from "../modules/auth/Welcome";
 import Wallet from "../modules/account/Wallet";
 import Register from "../modules/auth/Register";
 import Boarding from "../modules/auth/Boarding";
+import Rewards from "../modules/rewards/Rewards";
 import Boarding2 from "../modules/auth/Boarding2";
 import ListBlog from "../components/blog/ListBlog";
 import Exchange from "../modules/account/Exchange";
+import Referral from "../modules/referral/Referral";
+import Analytics from "../modules/referral/Analytics";
+import MyRecords from "../modules/referral/MyRecords";
 import BlogDetail from "../components/blog/BlogDetail";
+import Activities from "../modules/referral/Activities";
 import AdsScreen from "../modules/account/p2p/AdsScreen";
 import P2PScreen from "../modules/account/p2p/P2PScreen";
 import Assets from "../modules/account/assets/Assets.jsx";
+import Leaderboard from "../modules/referral/Leaderboard";
 import OrdersScreen from "../modules/account/p2p/OrdersScreen";
+import PremierInviter from "../modules/referral/PremierInviter";
+import CommissionWallet from "../modules/referral/CommissionWallet";
 import AddFundsScreen from "../modules/account/funds/AddFundsScreen";
 import ProgressPage from "../modules/account/onboarding/ProgressPage";
 import P2PExpressScreen from "../modules/account/p2p/P2PExpressScreen";
@@ -58,6 +65,7 @@ export default function Router() {
             <Route path="/blog" element={<ListBlog />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/rewards" element={<Rewards />} />
+            <Route path="/referral" element={<Referral />} />
             <Route path="/exchange" element={<Exchange />} />
             <Route path="/p2p-ads" element={<AdsScreen />} />
             <Route path="/markets" element={<MarketsScreen />} />
@@ -65,8 +73,14 @@ export default function Router() {
             <Route path="/buy-sell" element={<BuySellScreen />} />
             <Route path="/p2p-orders" element={<OrdersScreen />} />
             <Route path="/add-funds" element={<AddFundsScreen />} />
+            <Route path="/referral/records" element={<MyRecords />} />
             <Route path="/notifications" element={<Notifications />} />
+            <Route path="/referral/analytics" element={<Analytics />} />
+            <Route path="/referral/activities" element={<Activities />} />
+            <Route path="/referral/leaderboard" element={<Leaderboard />} />
+            <Route path="/referral/wallet" element={<CommissionWallet />} />
             <Route path="/onboarding/progress" element={<ProgressPage />} />
+            <Route path="/referral/premier" element={<PremierInviter />} />
             <Route path="/p2p-express" element={<P2PExpressScreen />} />
             <Route path="/deposit-crypto" element={<SelectCoinScreen />} />
             <Route path="/bank-transfer" element={<BankTransferScreen />} />
