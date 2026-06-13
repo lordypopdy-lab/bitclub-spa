@@ -1,5 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import { BsGift, BsPeopleFill, BsPiggyBank, BsRobot, BsBuilding, BsGrid } from "react-icons/bs";
+import {
+  BsGift,
+  BsPeopleFill,
+  BsPiggyBank,
+  BsRobot,
+  BsBuilding,
+  BsGrid,
+} from "react-icons/bs";
 
 const ICONS = {
   Rewards: BsGift,
@@ -10,14 +17,59 @@ const ICONS = {
   More: BsGrid,
 };
 
-const items = ["Rewards", "Referral", "Earn", "Trading bots", "IPO Prime", "More"];
+const items = [
+  "Rewards",
+  "Referral",
+  "Earn",
+  "Trading bots",
+  "IPO Prime",
+  "More",
+];
 
 const HomeQuickActions = () => {
   const navigate = useNavigate();
+
+  const handleNavigation = (label) => {
+    switch (label) {
+      case "Rewards":
+        navigate("/rewards");
+        break;
+
+      case "Referral":
+        navigate("/referral");
+        break;
+
+      case "Earn":
+        navigate("/earn");
+        break;
+
+      case "Trading bots":
+        navigate("/trading-bots");
+        break;
+
+      case "IPO Prime":
+        navigate("/ipo-prime");
+        break;
+
+      case "More":
+        navigate("/more");
+        break;
+
+      default:
+        break;
+    }
+  };
   return (
     <>
       <div style={{ padding: "16px 16px 6px" }}>
-        <div style={{ color: "#fff", fontWeight: 600, fontSize: 14, marginBottom: 10 }}>
+        <div
+          style={{
+            color: "#fff",
+            fontWeight: 600,
+            fontSize: 14,
+            marginBottom: 10,
+          }}
+        >
           Get started with Bitclub!
         </div>
         <div
@@ -30,8 +82,17 @@ const HomeQuickActions = () => {
             overflow: "hidden",
           }}
         >
-          <div style={{ color: "#fff", fontWeight: 800, fontSize: 22, lineHeight: 1.15 }}>
-            Deposit and start<br />trading
+          <div
+            style={{
+              color: "#fff",
+              fontWeight: 800,
+              fontSize: 22,
+              lineHeight: 1.15,
+            }}
+          >
+            Deposit and start
+            <br />
+            trading
           </div>
           <div
             style={{
@@ -41,19 +102,37 @@ const HomeQuickActions = () => {
               gap: 10,
             }}
           >
-            <div style={{ flex: 1, height: 6, background: "#15181d", borderRadius: 3, overflow: "hidden" }}>
-              <div style={{ width: "66%", height: "100%", background: "#22c1c3" }} />
+            <div
+              style={{
+                flex: 1,
+                height: 6,
+                background: "#15181d",
+                borderRadius: 3,
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{ width: "66%", height: "100%", background: "#22c1c3" }}
+              />
             </div>
-            <div style={{ color: "#cfd2d6", fontSize: 12, fontWeight: 600 }}>2/3</div>
+            <div style={{ color: "#cfd2d6", fontSize: 12, fontWeight: 600 }}>
+              2/3
+            </div>
           </div>
-          <div style={{ color: "#cfd2d6", fontSize: 13, marginTop: 10 }}>View all steps ›</div>
-          <div style={{ position: "absolute", right: 14, top: 18, fontSize: 44 }}>👛</div>
+          <div style={{ color: "#cfd2d6", fontSize: 13, marginTop: 10 }}>
+            View all steps ›
+          </div>
+          <div
+            style={{ position: "absolute", right: 14, top: 18, fontSize: 44 }}
+          >
+            👛
+          </div>
         </div>
       </div>
 
       <div style={{ padding: "2px 14px 4px" }}>
         <button
-          onClick={() => navigate( "/add-funds")}
+          onClick={() => navigate("/add-funds")}
           style={{
             width: "100%",
             background: "#fff",
@@ -80,9 +159,11 @@ const HomeQuickActions = () => {
       >
         {items.map((label) => {
           const Icon = ICONS[label] || BsGrid;
+
           return (
             <div
               key={label}
+              onClick={() => handleNavigation(label)}
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -93,7 +174,15 @@ const HomeQuickActions = () => {
               }}
             >
               <Icon color="#fff" size={22} />
-              <span style={{ color: "#cfd2d6", fontSize: 12, textAlign: "center", lineHeight: 1.15 }}>
+
+              <span
+                style={{
+                  color: "#cfd2d6",
+                  fontSize: 12,
+                  textAlign: "center",
+                  lineHeight: 1.15,
+                }}
+              >
                 {label}
               </span>
             </div>

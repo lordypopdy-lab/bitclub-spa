@@ -6,6 +6,7 @@ import Login from "../modules/auth/Login";
 import Send from "../modules/account/Send";
 import Earn from "../modules/account/Earn";
 //import Home from "../modules/account/Home";
+import Rewards from "../modules/rewards/Rewards";
 import Home from "../modules/account/home/Home";
 import Welcome from "../modules/auth/Welcome";
 import Wallet from "../modules/account/Wallet";
@@ -55,6 +56,7 @@ export default function Router() {
             <Route path="/assets" element={<Assets />} />
             <Route path="/blog" element={<ListBlog />} />
             <Route path="/wallet" element={<Wallet />} />
+            <Route path="/rewards" element={<Rewards />} />
             <Route path="/exchange" element={<Exchange />} />
             <Route path="/p2p-ads" element={<AdsScreen />} />
             <Route path="/markets" element={<MarketsScreen />} />
