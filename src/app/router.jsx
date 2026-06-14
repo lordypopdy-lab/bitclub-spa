@@ -27,6 +27,7 @@ import Assets from "../modules/account/assets/Assets.jsx";
 import Leaderboard from "../modules/referral/Leaderboard";
 import OrdersScreen from "../modules/account/p2p/OrdersScreen";
 import PremierInviter from "../modules/referral/PremierInviter";
+import CategoryPage from "../modules/notifications/CategoryPage";
 import PromotionCenter from "../modules/rewards/PromotionCenter";
 import CommissionWallet from "../modules/referral/CommissionWallet";
 import AddFundsScreen from "../modules/account/funds/AddFundsScreen";
@@ -89,6 +90,34 @@ export default function Router() {
             <Route path="/deposit-crypto" element={<SelectCoinScreen />} />
             <Route path="/bank-transfer" element={<BankTransferScreen />} />
             <Route path="/deposit-history" element={<DepositHistoryScreen />} />
+            <Route
+              path="/notifications/news"
+              element={<CategoryPage categoryKey="news" />}
+            />
+            <Route
+              path="/notifications/incentives"
+              element={<CategoryPage categoryKey="incentives" />}
+            />
+            <Route
+              path="/notifications/new-listings"
+              element={<CategoryPage categoryKey="new-listings" />}
+            />
+            <Route
+              path="/notifications/market-updates"
+              element={<CategoryPage categoryKey="market-updates" />}
+            />
+            <Route
+              path="/notifications/system-messages"
+              element={<CategoryPage categoryKey="system-messages" />}
+            />
+            <Route
+              path="/notifications/promotions"
+              element={<CategoryPage categoryKey="promotions" />}
+            />
+            <Route
+              path="/notifications/announcements"
+              element={<CategoryPage categoryKey="announcements" />}
+            />
           </Route>
         </Route>
       </Routes>
