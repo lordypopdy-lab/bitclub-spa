@@ -3,7 +3,6 @@ import RewardsHeader from "./components/RewardsHeader.jsx";
 import RewardsBottomNav from "./components/RewardsBottomNav.jsx";
 import ReferralFab from "./components/ReferralFab.jsx";
 import { useRewardsStore } from "./hooks/useRewardsStore.js";
-import { Link } from "react-router-dom";
 
 const promos = [
   {
@@ -29,7 +28,7 @@ const PromotionCenter = () => {
     >
       <RewardsHeader />
       <div style={{ padding: "0 16px" }}>
-        <div style={{ color: "#fff", fontSize: 26, fontWeight: 800 }}>
+        <div style={{ color: "#fff", fontSize: 21, fontWeight: 600 }}>
           Promotion Center
         </div>
         <div style={{ color: "#9aa0a8", fontSize: 13, marginTop: 6 }}>
@@ -67,28 +66,28 @@ const PromotionCenter = () => {
               >
                 {p.tag}
               </span>
-              <span style={{ color: "#fff", fontWeight: 700, fontSize: 15 }}>
+              <span style={{ color: "#fff", fontWeight: 600, fontSize: 12 }}>
                 {p.title}
               </span>
             </div>
             <div style={{ color: "#9aa0a8", fontSize: 12, marginTop: 8 }}>
               Prize pool: <b style={{ color: "#22c1c3" }}>{p.reward}</b>
             </div>
-            <Link
+            <button
               style={{
                 marginTop: 12,
                 background: "#fff",
                 color: "#0a0c0f",
                 border: "none",
                 borderRadius: 10,
-                padding: "10px 16px",
-                fontWeight: 700,
-                fontSize: 13,
+                padding: "8px 13px",
+                fontWeight: 600,
+                fontSize: 11,
                 cursor: "pointer",
               }}
             >
               Join
-            </Link>
+            </button>
           </div>
         ))}
       </div>

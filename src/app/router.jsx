@@ -12,6 +12,7 @@ import Wallet from "../modules/account/Wallet";
 import Register from "../modules/auth/Register";
 import Boarding from "../modules/auth/Boarding";
 import Rewards from "../modules/rewards/Rewards";
+import Redeem from "../modules/rewards/Redeem";
 import Boarding2 from "../modules/auth/Boarding2";
 import ListBlog from "../components/blog/ListBlog";
 import Exchange from "../modules/account/Exchange";
@@ -26,6 +27,7 @@ import Assets from "../modules/account/assets/Assets.jsx";
 import Leaderboard from "../modules/referral/Leaderboard";
 import OrdersScreen from "../modules/account/p2p/OrdersScreen";
 import PremierInviter from "../modules/referral/PremierInviter";
+import PromotionCenter from "../modules/rewards/PromotionCenter";
 import CommissionWallet from "../modules/referral/CommissionWallet";
 import AddFundsScreen from "../modules/account/funds/AddFundsScreen";
 import ProgressPage from "../modules/account/onboarding/ProgressPage";
@@ -68,6 +70,7 @@ export default function Router() {
             <Route path="/referral" element={<Referral />} />
             <Route path="/exchange" element={<Exchange />} />
             <Route path="/p2p-ads" element={<AdsScreen />} />
+            <Route path="/rewards/redeem" element={<Redeem />} />
             <Route path="/markets" element={<MarketsScreen />} />
             <Route path="/blog-detail" element={<BlogDetail />} />
             <Route path="/buy-sell" element={<BuySellScreen />} />
@@ -81,6 +84,7 @@ export default function Router() {
             <Route path="/referral/wallet" element={<CommissionWallet />} />
             <Route path="/onboarding/progress" element={<ProgressPage />} />
             <Route path="/referral/premier" element={<PremierInviter />} />
+            <Route path="/rewards/promotion" element={<PromotionCenter />} />
             <Route path="/p2p-express" element={<P2PExpressScreen />} />
             <Route path="/deposit-crypto" element={<SelectCoinScreen />} />
             <Route path="/bank-transfer" element={<BankTransferScreen />} />
