@@ -31,10 +31,10 @@ const TradeHeader = ({ onBack }) => {
         Buy &amp; Sell
       </div>
       <div className="d-flex align-items-center" style={{ gap: 6 }}>
-        <Link style={iconBtn} aria-label="History">
+        <Link to="/assets/withdraw/history" style={iconBtn} aria-label="History">
           <FiClock size={20} color="#fff" />
         </Link>
-        <Link style={iconBtn} aria-label="Help">
+        <Link to="#" style={iconBtn} aria-label="Help">
           <FiHelpCircle size={20} color="#fff" />
         </Link>
       </div>

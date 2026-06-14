@@ -8,6 +8,7 @@ import AssetHeader from "./components/AssetHeader.jsx";
 import AssetActionButtons from "./components/AssetActionButtons.jsx";
 import AssetToggle from "./components/AssetToggle.jsx";
 import AssetCoinList from "./components/AssetCoinList.jsx";
+import WithdrawTypeModal from "../../withdraw/components/WithdrawTypeModal.jsx";
 
 const cryptoCoins = [
   {
@@ -75,16 +76,29 @@ const fiatCoins = [
 const AssetsSpot = () => {
   const navigate = useNavigate();
   const [tab, setTab] = useState("Crypto");
+  const [showWithdrawModal, setShowWithdrawModal] = useState(false);
   const actions = [
     {
       label: "Add funds",
       Icon: FiPlus,
-      onClick: () => navigate({ to: "/add-funds" }),
+      onClick: () => navigate("/add-funds"),
     },
-    { label: "Withdraw", Icon: FiArrowUpRight },
-    { label: "Transfer", Icon: BsArrowLeftRight },
+    {
+      label: "Withdraw",
+      Icon: FiArrowUpRight,
+      onClick: () => setShowWithdrawModal(true),
+    },
+    {
+      label: "Transfer",
+      Icon: BsArrowLeftRight,
+      onClick: () => navigate("/assets/withdraw/internal"),
+    },
     { label: "PnL", Icon: TbChartLine },
   ];
+  const handleWithdrawSelection = (path) => {
+    setShowWithdrawModal(false);
+    navigate(path);
+  };
   return (
     <div>
       <AssetHeader label="Spot value (est.)" />
@@ -120,6 +134,11 @@ const AssetsSpot = () => {
       <AssetCoinList
         title=""
         coins={tab === "Crypto" ? cryptoCoins : fiatCoins}
+      />
+      <WithdrawTypeModal
+        open={showWithdrawModal}
+        onClose={() => setShowWithdrawModal(false)}
+        onSelect={handleWithdrawSelection}
       />
       <div style={{ height: 100 }} />
     </div>

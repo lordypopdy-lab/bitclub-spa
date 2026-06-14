@@ -3,19 +3,14 @@ import MainLayout from "../layouts/MainLayout";
 import AuthLayout from "../layouts/AuthLayout";
 
 import Login from "../modules/auth/Login";
-import Send from "../modules/account/Send";
-import Earn from "../modules/account/Earn";
-//import Home from "../modules/account/Home";
 import Home from "../modules/account/home/Home";
 import Welcome from "../modules/auth/Welcome";
-import Wallet from "../modules/account/Wallet";
 import Register from "../modules/auth/Register";
 import Boarding from "../modules/auth/Boarding";
 import Rewards from "../modules/rewards/Rewards";
 import Redeem from "../modules/rewards/Redeem";
 import Boarding2 from "../modules/auth/Boarding2";
 import ListBlog from "../components/blog/ListBlog";
-import Exchange from "../modules/account/Exchange";
 import Referral from "../modules/referral/Referral";
 import Analytics from "../modules/referral/Analytics";
 import MyRecords from "../modules/referral/MyRecords";
@@ -28,7 +23,10 @@ import Leaderboard from "../modules/referral/Leaderboard";
 import OrdersScreen from "../modules/account/p2p/OrdersScreen";
 import PremierInviter from "../modules/referral/PremierInviter";
 import CategoryPage from "../modules/notifications/CategoryPage";
+import WithdrawHistory from "../modules/withdraw/WithdrawHistory";
+import OnChainWithdraw from "../modules/withdraw/OnChainWithdraw";
 import PromotionCenter from "../modules/rewards/PromotionCenter";
+import InternalTransfer from "../modules/withdraw/InternalTransfer";
 import CommissionWallet from "../modules/referral/CommissionWallet";
 import AddFundsScreen from "../modules/account/funds/AddFundsScreen";
 import ProgressPage from "../modules/account/onboarding/ProgressPage";
@@ -59,17 +57,13 @@ export default function Router() {
         {/* PROTECTED PAGES */}
         <Route element={<ProtectedRoute />}>
           <Route element={<MainLayout />}>
-            <Route path="/earn" element={<Earn />} />
-            <Route path="/send" element={<Send />} />
             <Route path="/home" element={<Home />} />
             <Route path="/faq" element={<FaqScreen />} />
             <Route path="/p2p" element={<P2PScreen />} />
             <Route path="/assets" element={<Assets />} />
             <Route path="/blog" element={<ListBlog />} />
-            <Route path="/wallet" element={<Wallet />} />
             <Route path="/rewards" element={<Rewards />} />
             <Route path="/referral" element={<Referral />} />
-            <Route path="/exchange" element={<Exchange />} />
             <Route path="/p2p-ads" element={<AdsScreen />} />
             <Route path="/rewards/redeem" element={<Redeem />} />
             <Route path="/markets" element={<MarketsScreen />} />
@@ -90,6 +84,15 @@ export default function Router() {
             <Route path="/deposit-crypto" element={<SelectCoinScreen />} />
             <Route path="/bank-transfer" element={<BankTransferScreen />} />
             <Route path="/deposit-history" element={<DepositHistoryScreen />} />
+            <Route path="/assets/withdraw/internal" element={<InternalTransfer />} />
+            <Route
+              path="/assets/withdraw/history"
+              element={<WithdrawHistory />}
+            />
+            <Route
+              path="/assets/withdraw/onchain"
+              element={<OnChainWithdraw />}
+            />
             <Route
               path="/notifications/news"
               element={<CategoryPage categoryKey="news" />}
