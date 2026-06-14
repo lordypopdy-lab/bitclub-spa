@@ -63,7 +63,7 @@ const Rewards = () => {
       />
 
       <div style={{ padding: "32px 16px 0" }}>
-        <div style={{ color: "#fff", fontSize: 22, fontWeight: 800 }}>
+        <div style={{ color: "#fff", fontSize: 20, fontWeight: 700 }}>
           Advanced tasks
         </div>
         <div
@@ -74,8 +74,8 @@ const Rewards = () => {
             borderRadius: 8,
             padding: "8px 14px",
             color: "#fff",
-            fontSize: 13,
-            fontWeight: 700,
+            fontSize: 11,
+            fontWeight: 600,
           }}
         >
           Daily tasks

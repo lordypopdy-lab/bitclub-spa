@@ -75,8 +75,8 @@ const TaskCard = ({ task, progress, claimed, onAction }) => {
           <div
             style={{
               color: "#22c1c3",
-              fontSize: 22,
-              fontWeight: 800,
+              fontSize: 20,
+              fontWeight: 700,
               lineHeight: 1,
             }}
           >
@@ -95,7 +95,7 @@ const TaskCard = ({ task, progress, claimed, onAction }) => {
             border: "none",
             borderRadius: 10,
             padding: "10px 28px",
-            fontSize: 14,
+            fontSize: 12,
             fontWeight: 600,
             cursor: claimed ? "default" : "pointer",
             minWidth: 110,

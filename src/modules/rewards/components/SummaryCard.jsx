@@ -17,14 +17,14 @@ const SummaryCard = ({ points, couponsCount, onCheckIn, tier }) => {
           <div
             style={{
               color: "#fff",
-              fontSize: 26,
-              fontWeight: 800,
+              fontSize: 22,
+              fontWeight: 700,
               letterSpacing: 0.2,
             }}
           >
             Rewards Center
           </div>
-          <div style={{ color: "#9aa0a8", fontSize: 13, marginTop: 6 }}>
+          <div style={{ color: "#9aa0a8", fontSize: 12, marginTop: 9 }}>
             Earn points and redeem for USDT
           </div>
         </div>
@@ -92,7 +92,7 @@ const SummaryCard = ({ points, couponsCount, onCheckIn, tier }) => {
                 alignItems: "center",
                 justifyContent: "center",
                 color: "#22c1c3",
-                fontWeight: 800,
+                fontWeight: 700,
               }}
             >
               $
@@ -102,7 +102,7 @@ const SummaryCard = ({ points, couponsCount, onCheckIn, tier }) => {
                 style={{
                   color: "#fff",
                   fontSize: 22,
-                  fontWeight: 800,
+                  fontWeight: 700,
                   lineHeight: 1,
                 }}
               >
@@ -118,7 +118,7 @@ const SummaryCard = ({ points, couponsCount, onCheckIn, tier }) => {
             style={{ width: 1, alignSelf: "stretch", background: "#1c1f23" }}
           />
           <Link
-            onClick={() => navigate({ to: "/rewards/coupons" })}
+            onClick={() => navigate("/rewards/coupons")}
             style={{ ...rowBtn, flex: 1, justifyContent: "flex-start" }}
           >
             <div style={{ textAlign: "left", flex: 1 }}>
@@ -126,7 +126,7 @@ const SummaryCard = ({ points, couponsCount, onCheckIn, tier }) => {
                 style={{
                   color: "#fff",
                   fontSize: 22,
-                  fontWeight: 800,
+                  fontWeight: 700,
                   lineHeight: 1,
                 }}
               >
