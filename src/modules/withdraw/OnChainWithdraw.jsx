@@ -26,7 +26,7 @@ const Label = ({ children, hint }) => (
       marginBottom: 8,
     }}
   >
-    <div style={{ color: "#fff", fontWeight: 700, fontSize: 15 }}>
+    <div style={{ color: "#fff", fontWeight: 600, fontSize: 15 }}>
       {children}
     </div>
     {hint && <div style={{ color: "#9aa0a8", fontSize: 12 }}>{hint}</div>}
@@ -162,7 +162,7 @@ const OnChainWithdraw = () => {
       <Header title={`Send ${symbol}`} fallback="/assets/withdraw" showHelp />
 
       <div style={{ padding: "0 16px" }}>
-        <Label>Coin</Label>
+        <Label><div style={{fontWeight: 600}}>Coin</div></Label>
         <Box onClick={() => setCoinOpen(true)}>
           <div
             style={{
@@ -173,13 +173,13 @@ const OnChainWithdraw = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontWeight: 700,
+              fontWeight: 600,
               fontSize: 13,
             }}
           >
             {symbol[0]}
           </div>
-          <div style={{ flex: 1, fontWeight: 700 }}>
+          <div style={{ flex: 1, fontWeight: 600 }}>
             {symbol}{" "}
             <span style={{ color: "#9aa0a8", fontWeight: 400 }}>
               · {asset?.name}
@@ -220,7 +220,7 @@ const OnChainWithdraw = () => {
           Network
         </Label>
         <Box onClick={() => setNetOpen(true)}>
-          <div style={{ flex: 1, fontWeight: 700 }}>
+          <div style={{ flex: 1, fontWeight: 600 }}>
             {selectedNet?.label || "Select network"}
           </div>
           <FiChevronDown color="#9aa0a8" />
@@ -266,14 +266,14 @@ const OnChainWithdraw = () => {
               fontWeight: 600,
             }}
           />
-          <div style={{ color: "#fff", fontWeight: 700 }}>{symbol}</div>
+          <div style={{ color: "#fff", fontWeight: 600 }}>{symbol}</div>
           <Link
             onClick={() => setPct(1)}
             style={{
               background: "transparent",
               border: "none",
               color: "#22c1c3",
-              fontWeight: 700,
+              fontWeight: 600,
               cursor: "pointer",
             }}
           >
@@ -292,7 +292,7 @@ const OnChainWithdraw = () => {
                 border: "1px solid #1c1f23",
                 color: "#cfd2d6",
                 borderRadius: 8,
-                fontWeight: 700,
+                fontWeight: 600,
                 fontSize: 12,
                 cursor: "pointer",
               }}

@@ -26,15 +26,15 @@ const Header = ({ title, showHistory = true }) => {
           cursor: "pointer",
         }}
       >
-        <FiArrowLeft size={22} />
+        <FiArrowLeft size={21} />
       </Link>
       <div
         style={{
           flex: 1,
           textAlign: "center",
           color: "#fff",
-          fontSize: 17,
-          fontWeight: 700,
+          fontSize: 16,
+          fontWeight: 600,
         }}
       >
         {title}
