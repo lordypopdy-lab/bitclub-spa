@@ -26,7 +26,7 @@ const Label = ({ children, hint }) => (
       marginBottom: 8,
     }}
   >
-    <div style={{ color: "#fff", fontWeight: 600, fontSize: 15 }}>
+    <div style={{ color: "#fff", fontWeight: 700, fontSize: 15 }}>
       {children}
     </div>
     {hint && <div style={{ color: "#9aa0a8", fontSize: 12 }}>{hint}</div>}
@@ -45,6 +45,10 @@ const Box = ({ children, onClick, error }) => (
       display: "flex",
       alignItems: "center",
       gap: 10,
+      width: "100%",
+      maxWidth: "100%",
+      boxSizing: "border-box",
+      minWidth: 0,
     }}
   >
     {children}
@@ -154,15 +158,26 @@ const OnChainWithdraw = () => {
     <div
       style={{
         minHeight: "100vh",
+        width: "100%",
+        maxWidth: "100%",
+        overflowX: "hidden",
+        boxSizing: "border-box",
         background: "#000",
         color: "#fff",
-        paddingBottom: 120,
+        paddingBottom: 140,
       }}
     >
       <Header title={`Send ${symbol}`} fallback="/assets/withdraw" showHelp />
 
-      <div style={{ padding: "0 16px" }}>
-        <Label><div style={{fontWeight: 600}}>Coin</div></Label>
+      <div
+        style={{
+          padding: "0 16px",
+          width: "100%",
+          maxWidth: "100%",
+          boxSizing: "border-box",
+        }}
+      >
+        <Label>Coin</Label>
         <Box onClick={() => setCoinOpen(true)}>
           <div
             style={{
@@ -173,19 +188,29 @@ const OnChainWithdraw = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontWeight: 600,
+              fontWeight: 700,
               fontSize: 13,
+              flexShrink: 0,
             }}
           >
             {symbol[0]}
           </div>
-          <div style={{ flex: 1, fontWeight: 600 }}>
+          <div
+            style={{
+              flex: 1,
+              minWidth: 0,
+              fontWeight: 700,
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
+          >
             {symbol}{" "}
             <span style={{ color: "#9aa0a8", fontWeight: 400 }}>
               · {asset?.name}
             </span>
           </div>
-          <FiChevronDown color="#9aa0a8" />
+          <FiChevronDown color="#9aa0a8" style={{ flexShrink: 0 }} />
         </Box>
 
         <Label>Withdrawal address</Label>
@@ -196,6 +221,8 @@ const OnChainWithdraw = () => {
             placeholder="Tap and hold to paste address"
             style={{
               flex: 1,
+              minWidth: 0,
+              width: "100%",
               background: "transparent",
               border: "none",
               outline: "none",
@@ -205,7 +232,14 @@ const OnChainWithdraw = () => {
           />
         </Box>
         {address && !addrCheck.ok && (
-          <div style={{ color: "#ef4444", fontSize: 12, marginTop: 6 }}>
+          <div
+            style={{
+              color: "#ef4444",
+              fontSize: 12,
+              marginTop: 6,
+              wordBreak: "break-word",
+            }}
+          >
             {addrCheck.error}
           </div>
         )}
@@ -220,10 +254,19 @@ const OnChainWithdraw = () => {
           Network
         </Label>
         <Box onClick={() => setNetOpen(true)}>
-          <div style={{ flex: 1, fontWeight: 600 }}>
+          <div
+            style={{
+              flex: 1,
+              minWidth: 0,
+              fontWeight: 700,
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
+          >
             {selectedNet?.label || "Select network"}
           </div>
-          <FiChevronDown color="#9aa0a8" />
+          <FiChevronDown color="#9aa0a8" style={{ flexShrink: 0 }} />
         </Box>
 
         {selectedNet && /TON|XRP|BNB/.test(selectedNet.id) && (
@@ -236,6 +279,8 @@ const OnChainWithdraw = () => {
                 placeholder="Tag/Memo (optional)"
                 style={{
                   flex: 1,
+                  minWidth: 0,
+                  width: "100%",
                   background: "transparent",
                   border: "none",
                   outline: "none",
@@ -258,6 +303,8 @@ const OnChainWithdraw = () => {
             inputMode="decimal"
             style={{
               flex: 1,
+              minWidth: 0,
+              width: "100%",
               background: "transparent",
               border: "none",
               outline: "none",
@@ -266,15 +313,18 @@ const OnChainWithdraw = () => {
               fontWeight: 600,
             }}
           />
-          <div style={{ color: "#fff", fontWeight: 600 }}>{symbol}</div>
+          <div style={{ color: "#fff", fontWeight: 700, flexShrink: 0 }}>
+            {symbol}
+          </div>
           <Link
             onClick={() => setPct(1)}
             style={{
               background: "transparent",
               border: "none",
               color: "#22c1c3",
-              fontWeight: 600,
+              fontWeight: 700,
               cursor: "pointer",
+              flexShrink: 0,
             }}
           >
             All
@@ -282,7 +332,7 @@ const OnChainWithdraw = () => {
         </Box>
         <div style={{ display: "flex", gap: 8, marginTop: 10 }}>
           {[0.25, 0.5, 0.75, 1].map((p) => (
-            <Link
+            <button
               key={p}
               onClick={() => setPct(p)}
               style={{
@@ -292,13 +342,13 @@ const OnChainWithdraw = () => {
                 border: "1px solid #1c1f23",
                 color: "#cfd2d6",
                 borderRadius: 8,
-                fontWeight: 600,
+                fontWeight: 700,
                 fontSize: 12,
                 cursor: "pointer",
               }}
             >
               {p * 100}%
-            </Link>
+            </button>
           ))}
         </div>
 
@@ -345,8 +395,10 @@ const OnChainWithdraw = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          padding: "12px 16px 18px",
+          padding: "12px 16px calc(env(safe-area-inset-bottom) + 18px)",
           background: "linear-gradient(180deg, rgba(0,0,0,0), #000 40%)",
+          boxSizing: "border-box",
+          maxWidth: "100vw",
         }}
       >
         <button
@@ -490,7 +542,7 @@ const OnChainWithdraw = () => {
         open={successOpen}
         onClose={() => {
           setSuccessOpen(false);
-          navigate( "/assets/withdraw/history");
+          navigate("/assets/withdraw/history");
         }}
         title={null}
       >
@@ -529,7 +581,7 @@ const OnChainWithdraw = () => {
           <button
             onClick={() => {
               setSuccessOpen(false);
-              navigate( "/assets/withdraw/history");
+              navigate("/assets/withdraw/history");
             }}
             style={{
               width: "100%",
@@ -559,13 +611,18 @@ const Row = ({ k, v, accent }) => (
       padding: "8px 0",
       color: "#cfd2d6",
       fontSize: 14,
+      gap: 12,
     }}
   >
-    <span style={{ color: "#9aa0a8" }}>{k}</span>
+    <span style={{ color: "#9aa0a8", flexShrink: 0 }}>{k}</span>
     <span
       style={{
         color: accent ? "#22c1c3" : "#fff",
         fontWeight: accent ? 800 : 600,
+        textAlign: "right",
+        wordBreak: "break-all",
+        overflowWrap: "break-word",
+        minWidth: 0,
       }}
     >
       {v}

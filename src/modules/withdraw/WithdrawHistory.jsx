@@ -45,6 +45,10 @@ const WithdrawHistory = () => {
     <div
       style={{
         minHeight: "100vh",
+        width: "100%",
+        maxWidth: "100%",
+        overflowX: "hidden",
+        boxSizing: "border-box",
         background: "#000",
         color: "#fff",
         paddingBottom: 60,
@@ -56,13 +60,21 @@ const WithdrawHistory = () => {
         showHistory={false}
       />
 
-      <div style={{ padding: "0 16px" }}>
+      <div
+        style={{
+          padding: "0 16px",
+          width: "100%",
+          maxWidth: "100%",
+          boxSizing: "border-box",
+        }}
+      >
         <div
           style={{
             display: "flex",
             gap: 8,
             alignItems: "center",
             marginBottom: 12,
+            minWidth: 0,
           }}
         >
           <Link
@@ -76,6 +88,7 @@ const WithdrawHistory = () => {
               fontWeight: 700,
               fontSize: 13,
               cursor: "pointer",
+              flexShrink: 0,
             }}
           >
             {coin} ▾
@@ -83,6 +96,7 @@ const WithdrawHistory = () => {
           <div
             style={{
               flex: 1,
+              minWidth: 0,
               display: "flex",
               alignItems: "center",
               background: "#15181d",
@@ -91,13 +105,15 @@ const WithdrawHistory = () => {
               gap: 8,
             }}
           >
-            <FiSearch color="#7d828a" size={14} />
+            <FiSearch color="#7d828a" size={14} style={{ flexShrink: 0 }} />
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
               placeholder="Search ID/address"
               style={{
                 flex: 1,
+                minWidth: 0,
+                width: "100%",
                 background: "transparent",
                 border: "none",
                 outline: "none",
@@ -156,6 +172,11 @@ const WithdrawHistory = () => {
                   border: "1px solid #1c1f23",
                   borderRadius: 12,
                   marginBottom: 10,
+                  width: "100%",
+                  maxWidth: "100%",
+                  boxSizing: "border-box",
+                  wordBreak: "break-word",
+                  overflowWrap: "break-word",
                 }}
               >
                 <div
@@ -163,12 +184,26 @@ const WithdrawHistory = () => {
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
+                    gap: 8,
                   }}
                 >
                   <div
-                    style={{ display: "flex", gap: 8, alignItems: "center" }}
+                    style={{
+                      display: "flex",
+                      gap: 8,
+                      alignItems: "center",
+                      minWidth: 0,
+                      flex: 1,
+                    }}
                   >
-                    <span style={{ fontWeight: 800 }}>
+                    <span
+                      style={{
+                        fontWeight: 800,
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
                       {t.type === "internal"
                         ? "Internal"
                         : t.type === "sell"
@@ -183,12 +218,20 @@ const WithdrawHistory = () => {
                       fontSize: 12,
                       fontWeight: 700,
                       textTransform: "capitalize",
+                      flexShrink: 0,
                     }}
                   >
                     {t.status}
                   </span>
                 </div>
-                <div style={{ color: "#9aa0a8", fontSize: 12, marginTop: 4 }}>
+                <div
+                  style={{
+                    color: "#9aa0a8",
+                    fontSize: 12,
+                    marginTop: 4,
+                    wordBreak: "break-all",
+                  }}
+                >
                   {t.id} · {new Date(t.createdAt).toLocaleString()}
                 </div>
                 <div
@@ -196,12 +239,24 @@ const WithdrawHistory = () => {
                     marginTop: 8,
                     display: "flex",
                     justifyContent: "space-between",
+                    gap: 8,
                   }}
                 >
-                  <span style={{ color: "#9aa0a8", fontSize: 13 }}>
+                  <span
+                    style={{
+                      color: "#9aa0a8",
+                      fontSize: 13,
+                      minWidth: 0,
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
                     To {String(t.address).slice(0, 12)}…
                   </span>
-                  <span style={{ color: "#fff", fontWeight: 700 }}>
+                  <span
+                    style={{ color: "#fff", fontWeight: 700, flexShrink: 0 }}
+                  >
                     -{t.amount} {t.symbol}
                   </span>
                 </div>

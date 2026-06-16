@@ -1,8 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { FiArrowLeft, FiClock, FiHelpCircle } from "react-icons/fi";
 
-const Header = ({ title, showHistory = true }) => {
+const Header = ({
+  title,
+  fallback = "/assets",
+  showHistory = true,
+  showHelp = false,
+}) => {
+  const navigate = useNavigate();
+  const back = () => {
+    if (window.history.length > 1) navigate(-1);
+    else navigate(fallback);
+  };
   return (
     <div
       style={{
@@ -17,7 +27,7 @@ const Header = ({ title, showHistory = true }) => {
       }}
     >
       <Link
-        to={-1}
+        onClick={back}
         style={{
           background: "transparent",
           border: "none",
@@ -26,15 +36,15 @@ const Header = ({ title, showHistory = true }) => {
           cursor: "pointer",
         }}
       >
-        <FiArrowLeft size={21} />
+        <FiArrowLeft size={22} />
       </Link>
       <div
         style={{
           flex: 1,
           textAlign: "center",
           color: "#fff",
-          fontSize: 16,
-          fontWeight: 600,
+          fontSize: 17,
+          fontWeight: 700,
         }}
       >
         {title}
