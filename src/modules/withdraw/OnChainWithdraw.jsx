@@ -177,7 +177,7 @@ const OnChainWithdraw = () => {
           boxSizing: "border-box",
         }}
       >
-        <Label>Coin001</Label>
+        <Label>Coin</Label>
         <Box onClick={() => setCoinOpen(true)}>
           <div
             style={{
