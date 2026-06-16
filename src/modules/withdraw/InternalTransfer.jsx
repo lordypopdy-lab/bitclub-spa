@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { FiChevronDown, FiAlertTriangle, FiCheck } from "react-icons/fi";
 import Header from "./components/Header.jsx";
 import Sheet from "./components/Sheet.jsx";
@@ -201,7 +201,7 @@ const InternalTransfer = () => {
           <div style={{ color: "#fff", fontWeight: 700, flexShrink: 0 }}>
             {symbol}
           </div>
-          <button
+          <Link
             onClick={() => setAmount(bal.available + "")}
             style={{
               background: "transparent",
@@ -213,7 +213,7 @@ const InternalTransfer = () => {
             }}
           >
             All
-          </button>
+          </Link>
         </div>
 
         <div style={{ marginTop: 16, fontWeight: 700 }}>Memo (optional)</div>
@@ -314,7 +314,7 @@ const InternalTransfer = () => {
         open={successOpen}
         onClose={() => {
           setSuccessOpen(false);
-          navigate({ to: "/assets/withdraw/history" });
+          navigate("/assets/withdraw/history");
         }}
       >
         <div style={{ padding: "8px 18px 4px", textAlign: "center" }}>
@@ -348,7 +348,7 @@ const InternalTransfer = () => {
           <button
             onClick={() => {
               setSuccessOpen(false);
-              navigate({ to: "/assets/withdraw/history" });
+              navigate("/assets/withdraw/history");
             }}
             style={{
               width: "100%",
