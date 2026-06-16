@@ -49,13 +49,24 @@ const InternalTransfer = () => {
     <div
       style={{
         minHeight: "100vh",
+        width: "100%",
+        maxWidth: "100%",
+        overflowX: "hidden",
+        boxSizing: "border-box",
         background: "#000",
         color: "#fff",
-        paddingBottom: 120,
+        paddingBottom: 140,
       }}
     >
       <Header title="Internal transfer" fallback="/assets/withdraw" />
-      <div style={{ padding: "0 16px" }}>
+      <div
+        style={{
+          padding: "0 16px",
+          width: "100%",
+          maxWidth: "100%",
+          boxSizing: "border-box",
+        }}
+      >
         <div
           style={{
             color: "#fff",
@@ -77,6 +88,10 @@ const InternalTransfer = () => {
             alignItems: "center",
             gap: 10,
             cursor: "pointer",
+            width: "100%",
+            maxWidth: "100%",
+            boxSizing: "border-box",
+            minWidth: 0,
           }}
         >
           <div
@@ -90,17 +105,27 @@ const InternalTransfer = () => {
               justifyContent: "center",
               fontWeight: 700,
               fontSize: 13,
+              flexShrink: 0,
             }}
           >
             {symbol[0]}
           </div>
-          <div style={{ flex: 1, fontWeight: 700 }}>
+          <div
+            style={{
+              flex: 1,
+              minWidth: 0,
+              fontWeight: 700,
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              whiteSpace: "nowrap",
+            }}
+          >
             {symbol}{" "}
             <span style={{ color: "#9aa0a8", fontWeight: 400 }}>
               · {a?.name}
             </span>
           </div>
-          <FiChevronDown color="#9aa0a8" />
+          <FiChevronDown color="#9aa0a8" style={{ flexShrink: 0 }} />
         </div>
 
         <div style={{ marginTop: 16, fontWeight: 700 }}>
@@ -112,6 +137,8 @@ const InternalTransfer = () => {
           placeholder="user@email.com or BCU-XXXXXX"
           style={{
             width: "100%",
+            maxWidth: "100%",
+            boxSizing: "border-box",
             marginTop: 8,
             padding: 14,
             background: "#15181d",
@@ -128,10 +155,14 @@ const InternalTransfer = () => {
             marginTop: 16,
             display: "flex",
             justifyContent: "space-between",
+            gap: 8,
+            flexWrap: "wrap",
           }}
         >
           <span style={{ fontWeight: 700 }}>Amount</span>
-          <span style={{ color: "#9aa0a8", fontSize: 13 }}>
+          <span
+            style={{ color: "#9aa0a8", fontSize: 13, wordBreak: "break-word" }}
+          >
             Available: {bal.available} {symbol}
           </span>
         </div>
@@ -144,6 +175,10 @@ const InternalTransfer = () => {
             borderRadius: 12,
             padding: 14,
             alignItems: "center",
+            width: "100%",
+            maxWidth: "100%",
+            boxSizing: "border-box",
+            minWidth: 0,
           }}
         >
           <input
@@ -153,6 +188,8 @@ const InternalTransfer = () => {
             inputMode="decimal"
             style={{
               flex: 1,
+              minWidth: 0,
+              width: "100%",
               background: "transparent",
               border: "none",
               outline: "none",
@@ -161,7 +198,9 @@ const InternalTransfer = () => {
               fontWeight: 700,
             }}
           />
-          <div style={{ color: "#fff", fontWeight: 700 }}>{symbol}</div>
+          <div style={{ color: "#fff", fontWeight: 700, flexShrink: 0 }}>
+            {symbol}
+          </div>
           <button
             onClick={() => setAmount(bal.available + "")}
             style={{
@@ -170,6 +209,7 @@ const InternalTransfer = () => {
               color: "#22c1c3",
               fontWeight: 700,
               cursor: "pointer",
+              flexShrink: 0,
             }}
           >
             All
@@ -183,6 +223,8 @@ const InternalTransfer = () => {
           placeholder="Note for recipient"
           style={{
             width: "100%",
+            maxWidth: "100%",
+            boxSizing: "border-box",
             marginTop: 8,
             padding: 14,
             background: "#15181d",
@@ -203,6 +245,7 @@ const InternalTransfer = () => {
             borderRadius: 12,
             color: "#cfd2d6",
             fontSize: 13,
+            wordBreak: "break-word",
           }}
         >
           Internal transfers are instant and free between BITCLUB users.
@@ -218,6 +261,7 @@ const InternalTransfer = () => {
               display: "flex",
               alignItems: "center",
               gap: 8,
+              wordBreak: "break-word",
             }}
           >
             <FiAlertTriangle /> {err}
@@ -231,8 +275,10 @@ const InternalTransfer = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          padding: "12px 16px 18px",
+          padding: "12px 16px calc(env(safe-area-inset-bottom) + 18px)",
           background: "linear-gradient(180deg, rgba(0,0,0,0), #000 40%)",
+          boxSizing: "border-box",
+          maxWidth: "100vw",
         }}
       >
         <button
@@ -268,7 +314,7 @@ const InternalTransfer = () => {
         open={successOpen}
         onClose={() => {
           setSuccessOpen(false);
-          navigate("/assets/withdraw/history");
+          navigate({ to: "/assets/withdraw/history" });
         }}
       >
         <div style={{ padding: "8px 18px 4px", textAlign: "center" }}>
@@ -302,7 +348,7 @@ const InternalTransfer = () => {
           <button
             onClick={() => {
               setSuccessOpen(false);
-              navigate("/assets/withdraw/history");
+              navigate({ to: "/assets/withdraw/history" });
             }}
             style={{
               width: "100%",

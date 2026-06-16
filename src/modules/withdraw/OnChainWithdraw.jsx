@@ -353,7 +353,7 @@ const OnChainWithdraw = () => {
           onClick={openConfirm}
           disabled={!canSubmit}
           style={{
-            width: "85%",
+            width: "100%",
             padding: 16,
             borderRadius: 14,
             border: "none",
