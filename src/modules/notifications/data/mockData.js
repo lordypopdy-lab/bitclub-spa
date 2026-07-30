@@ -14,49 +14,49 @@ export const announcements = make(9, "ann", (i) => {
       title: "Bitclub announcement on resuming RLUSD - XRP Ledger withdrawals",
       message:
         "Dear users: Bitclub has now opened the withdrawal service on the RLUSD - XRP Ledger network.",
-      date: "2026-06-04 11:05:17",
+      date: "2026-08-01 11:05:17",
     },
     {
       title: "Bitclub to convert QNTSTOCKUSDT perpetual contract",
       message:
         "Bitclub will convert the QNTSTOCKUSDT perpetual contract to align with the new market structure.",
-      date: "2026-06-04 10:27:21",
+      date: "2026-08-01 10:27:21",
     },
     {
       title: "Bitclub announcement on resuming JST withdrawals",
       message:
         "Dear users: Bitclub has now opened the withdrawal service for JST.",
-      date: "2026-06-04 09:59:27",
+      date: "2026-08-01 09:59:27",
     },
     {
       title: "Announcement on Bitclub listing SMRUSDT",
       message:
         "To further diversify our trading products and ecosystem, Bitclub will list SMRUSDT.",
-      date: "2026-06-04 09:53:47",
+      date: "2026-08-01 09:53:47",
     },
     {
       title: "Bitclub to support margin functions for stock tokens",
       message:
         "Bitclub has officially added rAAPL, rAMZN, rMETA and more to the margin product line.",
-      date: "2026-06-04 09:01:44",
+      date: "2026-08-01 09:01:44",
     },
     {
       title: "Bitclub announcement on suspending JST withdrawals",
       message:
         "Dear users: Due to wallet maintenance, Bitclub will temporarily suspend JST withdrawals.",
-      date: "2026-06-04 08:08:27",
+      date: "2026-08-01 08:08:27",
     },
     {
       title: "Rules for using stock tokens as margin",
       message:
         "Overview Bitclub supports the use of select stock tokens as margin for derivatives.",
-      date: "2026-06-04 07:21:38",
+      date: "2026-08-01 07:21:38",
     },
     {
       title: "Bitclub announcement on suspending RLUSD withdrawals",
       message:
         "Dear users: Due to wallet maintenance, Bitclub will temporarily suspend RLUSD withdrawals.",
-      date: "2026-06-04 03:57:57",
+      date: "2026-08-01 03:57:57",
     },
     {
       title: "Bitclub announcement on resuming MOVE withdrawals",
@@ -81,8 +81,8 @@ export const promotions = make(5, "pro", (i) => {
 
 export const news = make(5, "news", (i) => {
   const items = [
-    { title: "LIT heats up as the perp DEX sector rallies", message: "👀 LIT heats up as the perp DEX sector continues to dominate flows.", date: "2026-06-04 10:12:00" },
-    { title: "ETF inflows hit a new monthly high", message: "Spot BTC ETFs absorbed $4.1B last week, the highest since launch.", date: "2026-06-04 08:00:00" },
+    { title: "LIT heats up as the perp DEX sector rallies", message: "👀 LIT heats up as the perp DEX sector continues to dominate flows.", date: "2026-08-01 10:12:00" },
+    { title: "ETF inflows hit a new monthly high", message: "Spot BTC ETFs absorbed $4.1B last week, the highest since launch.", date: "2026-08-01 08:00:00" },
     { title: "SOL ecosystem TVL crosses $12B", message: "Solana DeFi continues its parabolic ascent.", date: "2026-06-03 22:00:00" },
     { title: "Restaking narrative cools off", message: "Major LRTs see double-digit drawdowns this week.", date: "2026-06-03 14:00:00" },
     { title: "Stablecoin supply hits all-time high", message: "USDT + USDC supply tops $180B for the first time.", date: "2026-06-02 09:00:00" },
@@ -92,9 +92,9 @@ export const news = make(5, "news", (i) => {
 
 export const marketUpdates = make(5, "mkt", (i) => {
   const items = [
-    { title: "BTC price has fallen", message: "BTC dropped 2.4% in the last hour to $67,820.", date: "2026-06-04 11:00:00" },
-    { title: "ETH crosses $3,500", message: "Ether reclaims the $3,500 resistance with strong volume.", date: "2026-06-04 09:30:00" },
-    { title: "SOL up 8% on the day", message: "Solana leads majors after ecosystem upgrade.", date: "2026-06-04 06:10:00" },
+    { title: "BTC price has fallen", message: "BTC dropped 2.4% in the last hour to $67,820.", date: "2026-08-01 11:00:00" },
+    { title: "ETH crosses $3,500", message: "Ether reclaims the $3,500 resistance with strong volume.", date: "2026-08-01 09:30:00" },
+    { title: "SOL up 8% on the day", message: "Solana leads majors after ecosystem upgrade.", date: "2026-08-01 06:10:00" },
     { title: "DOGE volatility alert", message: "DOGE 1h volume +320%, watch for breakout.", date: "2026-06-03 19:45:00" },
     { title: "Funding rates turning negative", message: "Perp funding flips negative across majors.", date: "2026-06-03 12:00:00" },
   ];
@@ -103,8 +103,8 @@ export const marketUpdates = make(5, "mkt", (i) => {
 
 export const newListings = make(5, "list", (i) => {
   const items = [
-    { title: "New USDT-M futures trading pair: BTCUSDT", message: "New USDT-M futures trading pair: BTCUSDT now live with up to 125x leverage.", date: "2026-06-04 10:00:00" },
-    { title: "Spot listing: SMR/USDT", message: "Shimmer (SMR) is now tradable on Bitclub spot.", date: "2026-06-04 08:00:00" },
+    { title: "New USDT-M futures trading pair: BTCUSDT", message: "New USDT-M futures trading pair: BTCUSDT now live with up to 125x leverage.", date: "2026-08-01 10:00:00" },
+    { title: "Spot listing: SMR/USDT", message: "Shimmer (SMR) is now tradable on Bitclub spot.", date: "2026-08-01 08:00:00" },
     { title: "Innovation Zone: ZK/USDT", message: "ZK token listed under the Innovation Zone.", date: "2026-06-03 16:00:00" },
     { title: "New perpetual: ENA-USDT", message: "Ethena perpetuals are now available.", date: "2026-06-02 11:00:00" },
     { title: "Margin pair added: TIA/USDT", message: "Celestia is now supported in cross & isolated margin.", date: "2026-06-01 09:00:00" },
@@ -114,7 +114,7 @@ export const newListings = make(5, "list", (i) => {
 
 export const incentives = make(5, "inc", (i) => {
   const items = [
-    { title: "Today's incentives have been distributed", message: "💰 Today's incentives have been distributed to your spot wallet.", date: "2026-06-04 09:00:00" },
+    { title: "Today's incentives have been distributed", message: "💰 Today's incentives have been distributed to your spot wallet.", date: "2026-08-01 09:00:00" },
     { title: "Trading rebate credited", message: "Your 24h trading rebate of 12.45 USDT has been credited.", date: "2026-06-03 09:00:00" },
     { title: "VIP upgrade reward", message: "You've reached VIP 2. Claim your 50 USDT bonus.", date: "2026-06-02 14:00:00" },
     { title: "Launchpool rewards", message: "Your staking rewards of 124 LTOKEN are now claimable.", date: "2026-06-01 09:00:00" },
@@ -125,7 +125,7 @@ export const incentives = make(5, "inc", (i) => {
 
 export const systemMessages = make(5, "sys", (i) => {
   const items = [
-    { title: "Spot trading pair delisting", message: "The following spot pairs will be delisted on 2026-06-10: XYZ/USDT.", date: "2026-06-04 07:30:00" },
+    { title: "Spot trading pair delisting", message: "The following spot pairs will be delisted on 2026-06-10: XYZ/USDT.", date: "2026-08-01 07:30:00" },
     { title: "Scheduled system maintenance", message: "Bitclub will perform scheduled maintenance on 2026-06-06 02:00 UTC.", date: "2026-06-03 18:00:00" },
     { title: "KYC verification reminder", message: "Please complete advanced KYC to keep full withdrawal limits.", date: "2026-06-02 10:00:00" },
     { title: "Password changed successfully", message: "Your account password was changed from a new device.", date: "2026-06-01 21:14:00" },
@@ -139,7 +139,7 @@ export const categories = [
     key: "announcements",
     title: "Announcements",
     preview: "Bitclub announcement on resuming ...",
-    date: "2026-06-04",
+    date: "2026-08-01",
     icon: "megaphone",
     iconColor: "#22c1c3",
     path: "/notifications/announcements",
@@ -157,7 +157,7 @@ export const categories = [
     key: "news",
     title: "News notifications",
     preview: "👀 LIT heats up as the perp DEX se...",
-    date: "2026-06-04",
+    date: "2026-08-01",
     icon: "news",
     iconColor: "#22c1c3",
     path: "/notifications/news",
@@ -166,7 +166,7 @@ export const categories = [
     key: "market-updates",
     title: "Market updates",
     preview: "BTC price has fallen",
-    date: "2026-06-04",
+    date: "2026-08-01",
     icon: "chart",
     iconColor: "#22c1c3",
     path: "/notifications/market-updates",
@@ -175,7 +175,7 @@ export const categories = [
     key: "new-listings",
     title: "New listings",
     preview: "New USDT-M futures trading pair: B...",
-    date: "2026-06-04",
+    date: "2026-08-01",
     icon: "sparkle",
     iconColor: "#fff",
     path: "/notifications/new-listings",
@@ -184,7 +184,7 @@ export const categories = [
     key: "incentives",
     title: "Incentives",
     preview: "💰 Today's incentives have been di...",
-    date: "2026-06-04",
+    date: "2026-08-01",
     icon: "gift",
     iconColor: "#22c1c3",
     path: "/notifications/incentives",
@@ -193,7 +193,7 @@ export const categories = [
     key: "system-messages",
     title: "System message",
     preview: "Spot trading pair delisting",
-    date: "2026-06-04",
+    date: "2026-08-01",
     icon: "mail",
     iconColor: "#cfd2d6",
     path: "/notifications/system-messages",
