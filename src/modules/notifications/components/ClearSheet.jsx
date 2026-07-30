@@ -1,12 +1,6 @@
 import React from "react";
 
-const ClearSheet = ({
-  open,
-  onClose,
-  onClearCurrent,
-  onClearAll,
-  currentLabel,
-}) => {
+const ClearSheet = ({ open, onClose, onClearCurrent, onClearAll, currentLabel }) => {
   if (!open) return null;
   const btn = {
     width: "100%",

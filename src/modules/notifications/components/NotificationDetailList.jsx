@@ -28,15 +28,22 @@ const NotificationDetailList = ({ categoryKey, items, onItemClick }) => {
         <div
           key={n.id}
           onClick={() => onItemClick && onItemClick(n)}
+          onTouchStart={(e) => (e.currentTarget.style.background = "#0c0d10")}
+          onTouchEnd={(e) => (e.currentTarget.style.background = "transparent")}
+          onMouseDown={(e) => (e.currentTarget.style.background = "#0c0d10")}
+          onMouseUp={(e) => (e.currentTarget.style.background = "transparent")}
+          onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
           style={{
             display: "flex",
             gap: 12,
             padding: "16px",
             alignItems: "flex-start",
             cursor: "pointer",
-            animation: `notifFadeIn 0.3s ease ${idx * 0.03}s both`,
+            transition: "background 0.15s ease",
+            animation: `notifFadeIn 0.3s ease ${Math.min(idx, 12) * 0.03}s both`,
           }}
         >
+
           <div style={{ position: "relative" }}>
             <CategoryIcon name={iconName} color={iconColor} />
             {!n.read && (

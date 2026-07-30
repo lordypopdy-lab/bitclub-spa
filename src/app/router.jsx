@@ -34,6 +34,7 @@ import P2PExpressScreen from "../modules/account/p2p/P2PExpressScreen";
 import MarketsScreen from "../modules/markets/components/MarketsScreen";
 import BuySellScreen from "../modules/exchange/components/BuySellScreen";
 import FaqScreen from "../modules/account/deposit/components/FaqScreen.jsx";
+import NotificationDetail from "../modules/notifications/NotificationDetail";
 import SelectCoinScreen from "../modules/account/deposit/components/SelectCoinScreen";
 import BankTransferScreen from "../modules/account/deposit/components/BankTransferScreen.jsx";
 import DepositHistoryScreen from "../modules/account/deposit/components/DepositHistoryScreen";
@@ -120,6 +121,10 @@ export default function Router() {
             <Route
               path="/notifications/announcements"
               element={<CategoryPage categoryKey="announcements" />}
+            />
+            <Route
+              path="/notifications/:category/:id"
+              element={<NotificationDetail />}
             />
           </Route>
         </Route>

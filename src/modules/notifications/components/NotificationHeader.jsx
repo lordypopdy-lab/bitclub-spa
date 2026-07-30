@@ -3,12 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { FaRegTrashAlt } from "react-icons/fa";
 
-const NotificationHeader = ({
-  title,
-  onAction,
-  actionIcon,
-  fallback = -1,
-}) => {
+const NotificationHeader = ({ title, onAction, actionIcon, fallback = "/" }) => {
   const navigate = useNavigate();
   const back = () => {
     if (typeof window !== "undefined" && window.history.length > 1)
