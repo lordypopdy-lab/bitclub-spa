@@ -108,7 +108,7 @@ const Login = () => {
   return (
     <>
       <div className="header fixed-top bg-surface">
-        <Link to="Boarding2" className="left back-btn">
+        <Link to="/Boarding2" className="left back-btn">
           <i className="icon-left-btn"></i>
         </Link>
       </div>

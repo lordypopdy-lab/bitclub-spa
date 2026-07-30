@@ -42,7 +42,7 @@ const HomeQuickActions = () => {
             marginBottom: 10,
           }}
         >
-          Get started with Bitget!
+          Get started with Bitclub!
         </div>
         <div
           onClick={() => navigate("/onboarding/progress")}
@@ -125,7 +125,7 @@ const HomeQuickActions = () => {
             color: "#000",
             border: "none",
             borderRadius: 10,
-            padding: "14px",
+            padding: "11px",
             fontWeight: 600,
             fontSize: 14,
           }}
