@@ -4,9 +4,9 @@ export const HERO_CARDS = [
   { id: 1, tag: "Trade to share 50,000 USDT!", title: "Elon Musk's SpaceX perps are now live!", art: "🛸" },
   { id: 2, tag: "Guaranteed rewards", title: "Collect pizza puzzle pieces and share 50,000 USDT", art: "🍕" },
   { id: 3, tag: "Trade with confidence", title: "Get 10% Back on Losses, Up to $3,040 per User!", art: "💎" },
-  { id: 4, tag: "Middle East & Africa Region Exclusive", title: "Bitget's Elite Trading Series - Win Luxury Prizes", art: "🗺️" },
+  { id: 4, tag: "Middle East & Africa Region Exclusive", title: "Bitcluv's Elite Trading Series - Win Luxury Prizes", art: "🗺️" },
   { id: 5, tag: "Launchpad", title: "New token sale — secure your allocation today", art: "🚀" },
-  { id: 6, tag: "Bitget CFD Copy Trading Rally", title: "Grab a share of $65,000! First Trade Covered!", art: "🏆" },
+  { id: 6, tag: "Bitclub CFD Copy Trading Rally", title: "Grab a share of $65,000! First Trade Covered!", art: "🏆" },
 ];
 
 export const QUICK_ACTIONS = [
